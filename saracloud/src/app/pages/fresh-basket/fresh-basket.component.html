@@ -1,0 +1,1949 @@
+<!-- =========================================================
+     FRESHBASKET — EVENT-DRIVEN ORDER PROCESSING ON AWS
+     ========================================================= -->
+
+<section class="freshbasket-project">
+
+  <!-- =======================================================
+       01 — PROJECT HEADER
+       ======================================================= -->
+
+  <header class="project-header freshbasket-header">
+
+    <div class="project-label">
+      CLOUD / AWS PROJECT
+    </div>
+
+    <h1>
+      Fresh<span>Basket</span>
+    </h1>
+
+    <p class="project-tagline">
+      Fresh groceries. Smarter checkout.
+    </p>
+
+    <div class="project-meta">
+
+      <div class="meta-item">
+        <span class="meta-label">PROJECT TYPE</span>
+        <span class="meta-value">
+          Event-Driven Cloud Application
+        </span>
+      </div>
+
+      <div class="meta-item">
+        <span class="meta-label">PLATFORM</span>
+        <span class="meta-value">
+          Amazon Web Services
+        </span>
+      </div>
+
+      <div class="meta-item">
+        <span class="meta-label">FRONTEND</span>
+        <span class="meta-value">
+          Angular
+        </span>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =======================================================
+     TEAM
+     ======================================================= -->
+
+<section class="project-section team-section">
+
+  <div class="section-label">
+     THE TEAM
+  </div>
+
+  <div class="section-heading">
+    <h2>
+      Built
+      <span>together.</span>
+    </h2>
+  </div>
+
+  <p class="team-intro">
+    FreshBasket was built as a collaborative team project, with
+    each team member contributing to the development, cloud
+    architecture, documentation, and overall delivery of the platform.
+  </p>
+
+  <div class="team-grid">
+
+    <div class="team-member">
+      <span>01</span>
+      <h3>Sarah Onasanya</h3>
+    </div>
+
+    <div class="team-member">
+      <span>02</span>
+      <h3>Belinda Ntinyari</h3>
+    </div>
+
+    <div class="team-member">
+      <span>03</span>
+      <h3>Prince Kwesi Lassey</h3>
+    </div>
+
+    <div class="team-member">
+      <span>04</span>
+      <h3>Seth Aboagye</h3>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- =======================================================
+       02 — PROJECT OVERVIEW
+       ======================================================= -->
+
+  <section class="project-section freshbasket-overview">
+
+    <div class="section-label">
+      01 — PROJECT OVERVIEW
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        A smarter way to
+        <span>process orders.</span>
+      </h2>
+    </div>
+
+    <div class="overview-content">
+
+      <div class="overview-text">
+
+        <p>
+          FreshBasket is a cloud-native grocery checkout platform
+          designed to demonstrate how event-driven architecture on
+          AWS can solve a real business problem.
+        </p>
+
+        <p>
+          The platform is designed around a simple idea: when a
+          shopper places an order, checkout should remain fast and
+          reliable even when payment, inventory, and notifications
+          complete at different speeds.
+        </p>
+
+        <p>
+          Instead of forcing every operation to happen before the
+          customer receives a response, FreshBasket accepts and
+          records the order first, then allows independent AWS
+          services to react to the order event.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       03 — THE PROBLEM
+       ======================================================= -->
+
+  <section class="project-section problem-section">
+
+    <div class="section-label">
+      02 — THE PROBLEM
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        When checkout does
+        <span>too much.</span>
+      </h2>
+    </div>
+
+    <div class="problem-intro">
+
+      <p>
+        Traditional grocery platforms can process checkout
+        synchronously, forcing the browser to wait while several
+        downstream operations are completed.
+      </p>
+
+    </div>
+
+    <div class="sync-flow">
+
+      <div class="flow-item">
+        <span>01</span>
+        <strong>Browser</strong>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-item">
+        <span>02</span>
+        <strong>Server</strong>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-item">
+        <span>03</span>
+        <strong>Payment</strong>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-item">
+        <span>04</span>
+        <strong>Inventory</strong>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-item">
+        <span>05</span>
+        <strong>Email</strong>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-item">
+        <span>06</span>
+        <strong>Response</strong>
+      </div>
+
+    </div>
+
+    <div class="problem-grid">
+
+      <article class="problem-card">
+
+        <span class="problem-number">01</span>
+
+        <h3>
+          Slow steps
+        </h3>
+
+        <p>
+          A slow downstream service can keep the customer waiting,
+          increasing the likelihood of abandoned carts.
+        </p>
+
+      </article>
+
+
+      <article class="problem-card">
+
+        <span class="problem-number">02</span>
+
+        <h3>
+          Partial success
+        </h3>
+
+        <p>
+          Payment and inventory operations can succeed or fail at
+          different points, creating inconsistent order states.
+        </p>
+
+      </article>
+
+
+      <article class="problem-card">
+
+        <span class="problem-number">03</span>
+
+        <h3>
+          Notification failure
+        </h3>
+
+        <p>
+          A failed email service should not prevent a customer from
+          successfully completing checkout.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       04 — OUR SOLUTION
+       ======================================================= -->
+
+  <section class="project-section solution-section">
+
+    <div class="section-label">
+      03 — OUR SOLUTION
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        Let the order
+        <span>trigger the work.</span>
+      </h2>
+    </div>
+
+    <div class="solution-content">
+
+      <p>
+        FreshBasket uses an event-driven architecture where the
+        checkout process accepts and records the order first.
+        The order then becomes an event that other services can
+        consume independently.
+      </p>
+
+      <div class="event-principle">
+
+        <div class="principle-main">
+          <span>OrderPlaced</span>
+        </div>
+
+        <div class="principle-items">
+
+          <div>
+            <strong>Payment</strong>
+            <span>Consumer</span>
+          </div>
+
+          <div>
+            <strong>Inventory</strong>
+            <span>Consumer</span>
+          </div>
+
+          <div>
+            <strong>Notification</strong>
+            <span>Consumer</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       05 — ARCHITECTURE
+       ======================================================= -->
+
+  <section class="project-section architecture-section">
+
+    <div class="section-label">
+      04 — ARCHITECTURE
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        The system behind
+        <span>the checkout.</span>
+      </h2>
+    </div>
+
+    <div class="architecture-intro">
+
+      <p>
+        The FreshBasket architecture separates the customer-facing
+        application from the backend order-processing pipeline.
+        Each AWS service has a specific responsibility within the
+        workflow.
+      </p>
+
+    </div>
+
+    <div class="architecture-image">
+
+      <img
+        src="/images/new_architecture.png"
+        alt="FreshBasket end-to-end AWS architecture"
+      >
+
+    </div>
+
+    <div class="architecture-caption">
+
+      <span>END-TO-END ARCHITECTURE</span>
+
+      <p>
+        Angular storefront → Amplify Hosting → CloudFront →
+        API Gateway → Lambda → DynamoDB → EventBridge →
+        independent consumers.
+      </p>
+
+    </div>
+
+
+    <!-- REQUEST FLOW -->
+
+    <div class="architecture-flow">
+
+      <div class="flow-heading">
+
+        <span>REQUEST FLOW</span>
+
+        <h3>
+          From shopper to
+          <span>AWS event.</span>
+        </h3>
+
+      </div>
+
+      <div class="flow-image">
+
+        <img
+          src="/images/request-flow.png"
+          alt="FreshBasket request flow through AWS services"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       06 — FRONTEND HOSTING
+       ======================================================= -->
+
+  <section class="project-section hosting-section">
+
+    <div class="section-label">
+      05 — FRONTEND DELIVERY
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        Fast delivery at
+        <span>the edge.</span>
+      </h2>
+    </div>
+
+    <div class="hosting-flow">
+
+      <div class="hosting-step">
+        <span>01</span>
+        <strong>Browser</strong>
+        <small>Shopper</small>
+      </div>
+
+      <div class="hosting-arrow">→</div>
+
+      <div class="hosting-step">
+        <span>02</span>
+        <strong>Amplify</strong>
+        <small>Hosting</small>
+      </div>
+
+      <div class="hosting-arrow">→</div>
+
+      <div class="hosting-step">
+        <span>03</span>
+        <strong>CloudFront</strong>
+        <small>CDN + HTTPS</small>
+      </div>
+
+      <div class="hosting-arrow">→</div>
+
+      <div class="hosting-step">
+        <span>04</span>
+        <strong>Angular SPA</strong>
+        <small>Storefront</small>
+      </div>
+
+    </div>
+
+    <div class="hosting-note">
+
+      <p>
+        Amplify Hosting is responsible for building and publishing
+        the Angular storefront. CloudFront provides edge delivery
+        and HTTPS. Order API traffic uses a separate API Gateway
+        origin.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       07 — HOW AN ORDER MOVES
+       ======================================================= -->
+
+  <section class="project-section order-flow-section">
+
+    <div class="section-label">
+      06 — ORDER PROCESSING
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        How an order moves
+        <span>through AWS.</span>
+      </h2>
+    </div>
+
+    <div class="order-timeline">
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">01</span>
+
+        <div>
+          <h3>Authentication</h3>
+
+          <p>
+            The shopper authenticates through Amazon Cognito and
+            receives a JWT identity token.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">02</span>
+
+        <div>
+          <h3>Order request</h3>
+
+          <p>
+            The browser sends a POST request to API Gateway with
+            the customer's authorization token.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">03</span>
+
+        <div>
+          <h3>Validation</h3>
+
+          <p>
+            API Gateway validates the request, checks authentication,
+            applies throttling, and works with WAF for edge protection.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">04</span>
+
+        <div>
+          <h3>Order intake</h3>
+
+          <p>
+            The Order Intake Lambda validates business rules and
+            writes the order to DynamoDB with a pending status.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">05</span>
+
+        <div>
+          <h3>Event publication</h3>
+
+          <p>
+            The Lambda publishes an <strong>OrderPlaced</strong>
+            event to the custom EventBridge bus.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">06</span>
+
+        <div>
+          <h3>Immediate response</h3>
+
+          <p>
+            API Gateway returns a successful response with the
+            order ID while downstream processing continues.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">07</span>
+
+        <div>
+          <h3>Independent consumers</h3>
+
+          <p>
+            Payment, inventory, and notification services react
+            independently to the same order event.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="timeline-item">
+
+        <span class="timeline-number">08</span>
+
+        <div>
+          <h3>Notification processing</h3>
+
+          <p>
+            Notification messages pass through SQS before the
+            Notification Lambda sends confirmation through SES.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       08 — SHOPPER EXPERIENCE
+       ======================================================= -->
+
+  <section class="project-section experience-section">
+
+    <div class="section-label">
+      07 — SHOPPER EXPERIENCE
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        From sign-in to
+        <span>order confirmation.</span>
+      </h2>
+    </div>
+
+    <div class="experience-grid">
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/landing-page.png"
+            alt="FreshBasket landing page"
+          >
+
+        </div>
+
+        <div class="experience-content">
+
+          <span>01</span>
+
+          <h3>Landing</h3>
+
+          <p>
+            A brand-first grocery experience with a clear path
+            into shopping and the architecture story.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/sign-in-page.png"
+            alt="FreshBasket sign-in page"
+          >
+
+        </div>
+
+        <div class="experience-content">
+
+          <span>02</span>
+
+          <h3>Sign in</h3>
+
+          <p>
+            Shoppers authenticate securely using Amazon Cognito.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/sign-up-page.png"
+            alt="FreshBasket create account page"
+          >
+
+        </div>
+
+        <div class="experience-content">
+
+          <span>03</span>
+
+          <h3>Create account</h3>
+
+          <p>
+            New shoppers can create an account and verify it using
+            a one-time confirmation code.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/user-welcome-message.png"
+            alt="FreshBasket welcome message"
+          >
+
+        </div>
+
+        <div class="experience-content">
+
+          <span>04</span>
+
+          <h3>Welcome</h3>
+
+          <p>
+            After authentication, the storefront greets the
+            shopper by name.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/order-success-timeline.png"
+            alt="FreshBasket order success processing timeline"
+          >
+
+        </div>
+
+        <div class="experience-content">
+
+          <span>05</span>
+
+          <h3>Order processing</h3>
+
+          <p>
+            The success page visualizes the asynchronous processing
+            of payment, inventory, and notification.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/email-confirming-order.png"
+            alt="FreshBasket order confirmation email"
+          >
+
+        </div>
+
+        <div class="experience-content">
+
+          <span>06</span>
+
+          <h3>Email confirmation</h3>
+
+          <p>
+            Amazon SES sends a transactional confirmation after
+            the notification process completes.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/customer-order-history.png"
+            alt="FreshBasket customer order history"
+          >
+
+        </div>
+
+        <div class="experience-content">
+
+          <span>07</span>
+
+          <h3>Order history</h3>
+
+          <p>
+            Authenticated shoppers can review previous orders
+            and their processing statuses.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-image">
+
+          <img
+            src="/images/operations.png"
+            alt="FreshBasket operations dashboard"
+          >
+
+        </div>
+      
+
+        <div class="experience-content">
+
+          <span>08</span>
+
+          <h3>Operations pulse</h3>
+
+          <p>
+            An authenticated operations view summarizes order
+            volume, revenue, and status mix for the demonstration.
+          </p>
+
+
+          
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       09 — KEY FEATURES
+       ======================================================= -->
+
+  <section class="project-section features-section">
+
+    <div class="section-label">
+      08 — KEY FEATURES
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        Built around
+        <span>reliability.</span>
+      </h2>
+    </div>
+
+    <div class="features-grid">
+
+      <article class="feature-card">
+
+        <span>01</span>
+
+        <h3>
+          Authentication
+        </h3>
+
+        <p>
+          Amazon Cognito provides user identity and authentication
+          for protected application and API access.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <span>02</span>
+
+        <h3>
+          Event-driven checkout
+        </h3>
+
+        <p>
+          Order processing is triggered by an OrderPlaced business
+          event instead of blocking the checkout request.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <span>03</span>
+
+        <h3>
+          Independent processing
+        </h3>
+
+        <p>
+          Payment, inventory, and notification consumers can
+          operate on their own timelines.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <span>04</span>
+
+        <h3>
+          Queue resilience
+        </h3>
+
+        <p>
+          SQS provides buffering and retry isolation for the
+          notification workflow.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <span>05</span>
+
+        <h3>
+          Dead Letter Queue
+        </h3>
+
+        <p>
+          Repeatedly failed notification messages can be moved
+          into a DLQ for inspection.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <span>06</span>
+
+        <h3>
+          Transactional email
+        </h3>
+
+        <p>
+          Amazon SES delivers order confirmation messages without
+          holding up the original checkout response.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <span>07</span>
+
+        <h3>
+          Order tracking
+        </h3>
+
+        <p>
+          Customers can view order history and observe asynchronous
+          processing states.
+        </p>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <span>08</span>
+
+        <h3>
+          Operations dashboard
+        </h3>
+
+        <p>
+          The internal demo dashboard provides a quick view of
+          order volume, revenue, and status distribution.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       10 — TECHNOLOGY STACK
+       ======================================================= -->
+
+  <section class="project-section tech-stack-section">
+
+    <div class="section-label">
+      09 — TECHNOLOGY STACK
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        The technologies
+        <span>behind FreshBasket.</span>
+      </h2>
+    </div>
+
+    <div class="tech-stack-grid">
+
+      <div class="tech-category">
+
+        <span>FRONTEND</span>
+
+        <h3>
+          Angular
+        </h3>
+
+        <p>
+          Angular powers the FreshBasket single-page storefront.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>COMPUTE</span>
+
+        <h3>
+          AWS Lambda
+        </h3>
+
+        <p>
+          Short-lived serverless functions handle order intake
+          and downstream processing.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>API</span>
+
+        <h3>
+          API Gateway
+        </h3>
+
+        <p>
+          Provides the protected HTTP API for order requests.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>DATABASE</span>
+
+        <h3>
+          DynamoDB
+        </h3>
+
+        <p>
+          Stores orders and processing statuses with scalable
+          key-based access.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>EVENTS</span>
+
+        <h3>
+          EventBridge
+        </h3>
+
+        <p>
+          Publishes and distributes the OrderPlaced business event.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>MESSAGING</span>
+
+        <h3>
+          SQS
+        </h3>
+
+        <p>
+          Buffers notification processing and provides retry
+          and DLQ capabilities.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>IDENTITY</span>
+
+        <h3>
+          Cognito
+        </h3>
+
+        <p>
+          Handles shopper authentication and identity management.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>EMAIL</span>
+
+        <h3>
+          Amazon SES
+        </h3>
+
+        <p>
+          Sends transactional order confirmation emails.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>HOSTING</span>
+
+        <h3>
+          Amplify + CloudFront
+        </h3>
+
+        <p>
+          Publishes and delivers the Angular storefront globally
+          over HTTPS.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>SECURITY</span>
+
+        <h3>
+          WAF + IAM + KMS
+        </h3>
+
+        <p>
+          Provides edge protection, least-privilege access, and
+          encryption capabilities.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>INFRASTRUCTURE</span>
+
+        <h3>
+          CloudFormation
+        </h3>
+
+        <p>
+          Infrastructure is defined and deployed as code.
+        </p>
+
+      </div>
+
+
+      <div class="tech-category">
+
+        <span>OBSERVABILITY</span>
+
+        <h3>
+          CloudWatch
+        </h3>
+
+        <p>
+          Provides logs and metrics for monitoring the system.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       11 — WELL ARCHITECTED
+       ======================================================= -->
+
+  <section class="project-section well-architected-section">
+
+    <div class="section-label">
+      10 — AWS WELL-ARCHITECTED
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        Designed with
+        <span>the fundamentals in mind.</span>
+      </h2>
+    </div>
+
+    <p class="well-intro">
+      FreshBasket uses the AWS Well-Architected Framework as a
+      practical checklist for hardening the system rather than
+      treating the framework as decoration.
+    </p>
+
+    <div class="well-grid">
+
+      <article class="well-card">
+
+        <span>01</span>
+
+        <h3>
+          Operational Excellence
+        </h3>
+
+        <ul>
+          <li>CloudFormation infrastructure as code</li>
+          <li>CloudWatch logs and metrics</li>
+          <li>Deployment and demo documentation</li>
+          <li>SQS retries and DLQ handling</li>
+        </ul>
+
+      </article>
+
+
+      <article class="well-card">
+
+        <span>02</span>
+
+        <h3>
+          Security
+        </h3>
+
+        <ul>
+          <li>Cognito authentication</li>
+          <li>API Gateway JWT authorization</li>
+          <li>AWS WAF protection</li>
+          <li>Least-privilege IAM roles</li>
+          <li>KMS and Secrets Manager</li>
+        </ul>
+
+      </article>
+
+
+      <article class="well-card">
+
+        <span>03</span>
+
+        <h3>
+          Reliability
+        </h3>
+
+        <ul>
+          <li>Independent failure domains</li>
+          <li>EventBridge fan-out</li>
+          <li>SQS buffering</li>
+          <li>Retry and DLQ handling</li>
+          <li>Stateless Lambda compute</li>
+        </ul>
+
+      </article>
+
+
+      <article class="well-card">
+
+        <span>04</span>
+
+        <h3>
+          Performance Efficiency
+        </h3>
+
+        <ul>
+          <li>Thin checkout path</li>
+          <li>CloudFront edge delivery</li>
+          <li>DynamoDB managed storage</li>
+          <li>Independently scalable consumers</li>
+        </ul>
+
+      </article>
+
+
+      <article class="well-card">
+
+        <span>05</span>
+
+        <h3>
+          Cost Optimization
+        </h3>
+
+        <ul>
+          <li>Pay-per-use services</li>
+          <li>No always-on checkout servers</li>
+          <li>Managed AWS services</li>
+        </ul>
+
+      </article>
+
+
+      <article class="well-card">
+
+        <span>06</span>
+
+        <h3>
+          Sustainability
+        </h3>
+
+        <ul>
+          <li>Event-driven scale-to-zero</li>
+          <li>Efficient managed services</li>
+          <li>AWS-operated infrastructure</li>
+        </ul>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       12 — DESIGN DECISIONS
+       ======================================================= -->
+
+  <section class="project-section decisions-section">
+
+    <div class="section-label">
+      11 — DESIGN DECISIONS
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        Architecture is also
+        <span>about trade-offs.</span>
+      </h2>
+    </div>
+
+    <div class="decision-list">
+
+      <article class="decision-item">
+
+        <div class="decision-number">
+          01
+        </div>
+
+        <div class="decision-content">
+
+          <h3>
+            Event-driven fan-out
+          </h3>
+
+          <p>
+            <strong>Benefit:</strong>
+            Resilience, speed, and independent scaling.
+          </p>
+
+          <p>
+            <strong>Trade-off:</strong>
+            Eventual consistency means the interface must communicate
+            that processing is still taking place.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="decision-item">
+
+        <div class="decision-number">
+          02
+        </div>
+
+        <div class="decision-content">
+
+          <h3>
+            SQS for notifications
+          </h3>
+
+          <p>
+            <strong>Benefit:</strong>
+            Retry isolation and a clear Dead Letter Queue story.
+          </p>
+
+          <p>
+            <strong>Trade-off:</strong>
+            Payment and inventory use direct event targets, so not
+            every processing path is buffered identically.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="decision-item">
+
+        <div class="decision-number">
+          03
+        </div>
+
+        <div class="decision-content">
+
+          <h3>
+            Cognito + API Gateway
+          </h3>
+
+          <p>
+            <strong>Benefit:</strong>
+            A strong identity boundary between shoppers and APIs.
+          </p>
+
+          <p>
+            <strong>Trade-off:</strong>
+            Demo authentication and SES sandbox rules require
+            careful configuration.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="decision-item">
+
+        <div class="decision-number">
+          04
+        </div>
+
+        <div class="decision-content">
+
+          <h3>
+            Amplify Hosting
+          </h3>
+
+          <p>
+            <strong>Benefit:</strong>
+            Fast deployment of the Angular storefront with HTTPS
+            and CloudFront delivery.
+          </p>
+
+          <p>
+            <strong>Trade-off:</strong>
+            The website and API use separate origins, making correct
+            CORS configuration important.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="decision-item">
+
+        <div class="decision-number">
+          05
+        </div>
+
+        <div class="decision-content">
+
+          <h3>
+            Simulated payment and inventory
+          </h3>
+
+          <p>
+            <strong>Benefit:</strong>
+            Keeps the event-driven architecture easy to demonstrate.
+          </p>
+
+          <p>
+            <strong>Trade-off:</strong>
+            It is not a PCI payment integration or production
+            warehouse management system.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       13 — TWO WEEK BUILD
+       ======================================================= -->
+
+  <section class="project-section build-section">
+
+    <div class="section-label">
+      12 — BUILD PROCESS
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        Built in
+        <span>three focused weeks.</span>
+      </h2>
+    </div>
+
+    <div class="build-plan-image">
+
+      <img
+        src="/images/three_week_plan.png"
+        alt="FreshBasket delivery plan"
+      >
+
+    </div>
+
+
+    <div class="build-week">
+
+      <div class="week-label">
+        WEEK 01
+      </div>
+
+      <div class="week-content">
+
+        <h3>
+          Foundation + Event-Driven Core
+        </h3>
+
+        <p>
+          The first week focused on establishing the core order
+          processing architecture.
+        </p>
+
+        <ul>
+          <li>API Gateway and Order Intake Lambda</li>
+          <li>DynamoDB order storage</li>
+          <li>Custom EventBridge bus</li>
+          <li>OrderPlaced event</li>
+          <li>Payment, Inventory and Notification consumers</li>
+          <li>Cognito authentication</li>
+          <li>IAM, KMS and Secrets Manager foundations</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="build-image">
+
+      <img
+        src="/images/new_week_one.png"
+        alt="FreshBasket week one architecture"
+      >
+
+    </div>
+
+
+    <div class="build-image">
+
+      <img
+        src="/images/new_week_two.png"
+        alt="FreshBasket event-driven core architecture"
+      >
+
+    </div>
+
+
+    <div class="build-week">
+
+      <div class="week-label">
+        WEEK 02
+      </div>
+
+      <div class="week-content">
+
+        <h3>
+          Production Readiness + Product Experience
+        </h3>
+
+        <p>
+          The second week focused on resilience, security, and
+          delivering the complete FreshBasket customer experience.
+        </p>
+
+        <ul>
+          <li>SQS and Dead Letter Queue</li>
+          <li>AWS WAF</li>
+          <li>Shield Standard baseline</li>
+          <li>Amazon Inspector</li>
+          <li>CMK and Secrets wiring</li>
+          <li>Angular storefront on Amplify Hosting</li>
+          <li>SES order confirmation emails</li>
+          <li>End-to-end authentication and checkout demo</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="build-image">
+
+      <img
+        src="/images/new_week_three.png"
+        alt="FreshBasket hardened production architecture"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       14 — MY CONTRIBUTION
+       ======================================================= -->
+
+  <section class="project-section contribution-section">
+
+    <div class="section-label">
+      13 — MY CONTRIBUTION
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        What I
+        <span>contributed.</span>
+      </h2>
+    </div>
+
+    <div class="contribution-content">
+
+      <p>
+        My contribution to FreshBasket involved working with the
+        team to design, build, test, and document the cloud-based
+        order processing solution.
+      </p>
+
+      <div class="contribution-grid">
+
+        <div class="contribution-card">
+
+          <span>01</span>
+
+          <h3>
+            Cloud Architecture
+          </h3>
+
+          <p>
+            Worked with AWS services to support an event-driven
+            order processing architecture.
+          </p>
+
+        </div>
+
+
+        <div class="contribution-card">
+
+          <span>02</span>
+
+          <h3>
+            Application Development
+          </h3>
+
+          <p>
+            Contributed to the FreshBasket application and its
+            integration with the cloud backend.
+          </p>
+
+        </div>
+
+
+        <div class="contribution-card">
+
+          <span>03</span>
+
+          <h3>
+            Security
+          </h3>
+
+          <p>
+            Worked with authentication, authorization, IAM, and
+            other AWS security capabilities.
+          </p>
+
+        </div>
+
+
+        <div class="contribution-card">
+
+          <span>04</span>
+
+          <h3>
+            Documentation
+          </h3>
+
+          <p>
+            Contributed to documenting the architecture, deployment
+            process, and technical decisions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       15 — CHALLENGES & LESSONS
+       ======================================================= -->
+
+  <section class="project-section lessons-section">
+
+    <div class="section-label">
+      14 — CHALLENGES & LESSONS
+    </div>
+
+    <div class="section-heading">
+      <h2>
+        What the project
+        <span>taught me.</span>
+      </h2>
+    </div>
+
+    <div class="lessons-grid">
+
+      <article class="lesson-card">
+
+        <span>01</span>
+
+        <h3>
+          Eventual consistency
+        </h3>
+
+        <p>
+          Event-driven systems require the interface to communicate
+          that an order is being processed rather than assuming every
+          operation completes immediately.
+        </p>
+
+      </article>
+
+
+      <article class="lesson-card">
+
+        <span>02</span>
+
+        <h3>
+          Failure isolation
+        </h3>
+
+        <p>
+          Not every failure should affect the customer-facing
+          checkout experience. Queues and independent consumers
+          help isolate downstream failures.
+        </p>
+
+      </article>
+
+
+      <article class="lesson-card">
+
+        <span>03</span>
+
+        <h3>
+          Cloud security
+        </h3>
+
+        <p>
+          Authentication, authorization, encryption, IAM, WAF,
+          and secrets management all contribute to a secure
+          cloud architecture.
+        </p>
+
+      </article>
+
+
+      <article class="lesson-card">
+
+        <span>04</span>
+
+        <h3>
+          Architecture communication
+        </h3>
+
+        <p>
+          A strong architecture is not only about implementation.
+          It should also be explainable to both technical and
+          non-technical audiences.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       16 — OUTCOME
+       ======================================================= -->
+
+  <section class="project-section outcome-section">
+
+    <div class="section-label">
+      15 — OUTCOME
+    </div>
+
+    <div class="outcome-content">
+
+      <div class="outcome-main">
+
+        <h2>
+          A working demonstration of
+          <span>event-driven cloud architecture.</span>
+        </h2>
+
+        <p>
+          FreshBasket demonstrates how a grocery checkout can
+          remain responsive while payment, inventory, and
+          notification workflows operate independently.
+        </p>
+
+        <p>
+          The project connects practical customer experience with
+          AWS architecture principles, showing how EventBridge,
+          SQS, Lambda, DynamoDB, Cognito, SES, and other managed
+          services can work together to build a resilient
+          serverless application.
+        </p>
+
+      </div>
+
+      <div class="outcome-stat">
+
+        <span>CORE IDEA</span>
+
+        <strong>
+          Accept first.
+          Process independently.
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       17 — PROJECT LINKS
+       ======================================================= -->
+
+  <section class="project-section project-links-section">
+
+    <div class="section-label">
+      16 — EXPLORE THE PROJECT
+    </div>
+
+    <div class="section-heading">
+
+      <h2>
+        See FreshBasket
+        <span>in action.</span>
+      </h2>
+
+    </div>
+
+    <div class="project-links">
+
+
+      <a
+        href="https://github.com/onasanyasarah17-bit/aws-event-driven-order-processing-team-eta"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-link secondary-link"
+      >
+        VIEW GITHUB
+        <span>↗</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       18 — CLOSING
+       ======================================================= -->
+
+  <section class="project-closing">
+
+    <div class="closing-line"></div>
+
+    <p>
+      FreshBasket is not Lambda for Lambda's sake. It is a
+      grocery checkout shaped around a business truth:
+      acceptance, payment, inventory, and communication are
+      related facts that should not share a single failure and
+      latency domain.
+    </p>
+
+    <div class="closing-line"></div>
+
+  </section>
+
+</section>

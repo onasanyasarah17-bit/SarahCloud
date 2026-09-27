@@ -1,0 +1,1342 @@
+/* =========================================================
+   SARACLOUD — ABOUT PAGE
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:host {
+  display: block;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.about-page {
+  min-height: 100vh;
+  background: #05030d;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ABOUT INTRO
+   ========================================================= */
+
+.about-intro {
+  min-height: 85vh;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.85fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 120px 8%;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.about-content {
+  max-width: 650px;
+}
+
+
+.about-label {
+  margin: 0 0 22px;
+
+  color: #a78bfa;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+.about-content h1 {
+  margin: 0 0 30px;
+
+  color: #ffffff;
+
+  font-size: clamp(52px, 6vw, 82px);
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -4px;
+}
+
+
+.about-content h1 span {
+  color: #a78bfa;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+
+.about-text {
+  max-width: 600px;
+
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  .about-cloud {
+  color: #a78bfa;
+  }
+}
+
+
+
+/* =========================================================
+   PHOTO
+   ========================================================= */
+
+.about-image {
+  width: 100%;
+
+  max-width: 470px;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  margin-left: auto;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(167, 139, 250, 0.3);
+
+  background: #0a0714;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+/* =========================================================
+   TABLET — FULL WIDTH TEXT
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .about-intro {
+    position: relative;
+    width: 100%;
+    max-width: none !important;
+
+    padding: 100px 100px 8%;
+    box-sizing: border-box;
+  }
+
+  /* Make the content itself full width */
+  .about-content {
+    width: 100%;
+    max-width: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Heading */
+  .about-content h1 {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 40px;
+    padding-right: 150px;
+
+    font-size: 52px;
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    text-align: justify;
+    box-sizing: border-box;
+  }
+
+  /* Image */
+  .about-image {
+    position: absolute;
+
+    top: 110px;
+    right: 6%;
+
+    width: 200px;
+    height: 200px;
+
+    margin: 0;
+
+    border-radius: 10%;
+    overflow: hidden;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+  }
+
+  /* =====================================================
+     TEXT — USE THE ENTIRE AVAILABLE WIDTH
+     ===================================================== */
+
+  .about-text {
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 10px 0 0 !important;
+    padding: 0 !important;
+
+    font-size: 20px;
+    line-height: 1.8;
+
+    text-align: left;
+  }
+
+  .about-text p {
+    width: 100%;
+    max-width: none !important;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 600px) {
+
+  .about-intro {
+    position: relative;
+    padding: 80px 6%;
+  }
+
+  .about-content h1 {
+    padding-right: 90px;
+    min-height: 50px;
+
+    display: center;
+    align-items: center;
+
+    font-size: 40px;
+    line-height: 1.05;
+    letter-spacing: -2px;
+  }
+
+  .about-image {
+    position: absolute;
+
+    top: 155px;
+    right: 6%;
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0;
+
+    border-radius: 50%;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   JOURNEY INTRO
+   ========================================================= */
+
+.journey-intro {
+  max-width: 1500px;
+  margin: 0 auto 90px;
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  border-radius: 1px;
+
+  background: #ffffff;
+}
+
+.journey-label {
+  margin: 10px;
+
+  color: #6e3edd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.journey-intro h2 {
+  margin: 30px;
+
+  color: #000000;
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+}
+
+.journey-intro h2 span {
+  color: #8b5cf6;
+}
+
+
+/* =========================================================
+   SECTION 2 — MY JOURNEY INTO TECH
+   ========================================================= */
+
+.tech-journey {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 35px 0;
+  color: #ffffff;
+}
+/* =========================================================
+   FIRST STEP INTO TECH — CONTAINER
+   ========================================================= */
+
+.first-step-tech {
+  padding: 35px;
+  background: #13131a;
+  border: 1px solid #a78bfa;
+  border-radius: 18px;
+  color: #ffffff;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.tech-journey-content {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SMALL LOGO
+   ========================================================= */
+
+.tech-journey-logo {
+  float: left;
+
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+
+  margin: 5px 45px 25px 0;
+
+  padding: 12px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.tech-journey-content .about-label {
+  margin: 0 0 18px;
+
+  color: #9389af;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.tech-journey-content h2 {
+  margin: 0 0 30px;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(35px, 5vw, 50px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+}
+
+
+.tech-journey-content h2 span {
+  color: #a78bfa;
+}
+
+.read-more-btn {
+  margin-top: 20px;
+  padding: 11px 22px;
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+.read-less-container {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #292932;
+}
+
+
+/* =========================================================
+   STORY TEXT
+   ========================================================= */
+
+.tech-journey-content p:not(.about-label) {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+
+.tech-journey-content strong {
+  color: #a78bfa;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CLEAR FLOAT
+   ========================================================= */
+
+.tech-journey-content::after {
+  content: "";
+
+  display: block;
+
+  clear: both;
+}
+
+
+/* =========================================================
+   VIEW MY CAPSTONE PROJECT
+   ========================================================= */
+
+.view-project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+  padding: 11px 12px;
+
+  border: 1px solid #8b5cf6;
+  border-radius: 10px;
+
+  background: #8b5cf6;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+/* =========================================================
+   TABLET — MY JOURNEY INTO TECH
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  /* =======================================================
+     MAIN SECTION
+     ======================================================= */
+
+  .tech-journey {
+    width: 100%;
+    max-width: none;
+
+    margin: 40px 0;
+    padding: 30px 4%;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     FIRST STEP CONTAINER
+     ======================================================= */
+
+  .first-step-tech {
+    width: 100%;
+
+    padding: 30px 23px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+  }
+
+
+  /* =======================================================
+     CONTENT
+     ======================================================= */
+
+  .tech-journey-content {
+    width: 100%;
+    max-width: none;
+
+    margin-left: 25px;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     LOGO
+     ======================================================= */
+
+  .tech-journey-logo {
+    float: left;
+
+    width: 100px;
+    height: 100px;
+
+    margin: 5px 35px 20px 0;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(167, 139, 250, 0.25);
+  }
+
+
+  /* =======================================================
+     LABEL
+     ======================================================= */
+
+  .tech-journey-content .about-label {
+    margin: 0 0 15px;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    letter-spacing: 4px;
+  }
+
+
+  /* =======================================================
+     HEADING
+     ======================================================= */
+
+  .tech-journey-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(32px, 5vw, 46px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  /* =======================================================
+     STORY TEXT
+     ======================================================= */
+
+  .tech-journey-content p:not(.about-label) {
+    margin: 0 0 20px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+  }
+
+
+  /* =======================================================
+     READ MORE BUTTON
+     ======================================================= */
+
+  .read-more-btn {
+    display: inline-flex;
+
+    margin-top: 15px;
+
+    padding: 10px 20px;
+
+    font-size: 13px;
+  }
+
+
+  /* =======================================================
+     READ LESS
+     ======================================================= */
+
+  .read-less-container {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+
+  /* =======================================================
+     CAPSTONE BUTTON
+     ======================================================= */
+
+  .view-project-btn {
+    margin-top: 15px;
+
+    padding: 11px 14px;
+
+    font-size: 13px;
+  }
+
+
+  /* =======================================================
+     CLEAR FLOAT
+     ======================================================= */
+
+  .tech-journey-content::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 600px) {
+
+  .tech-journey {
+    padding: 20px 10%;
+  }
+
+  /* Logo sits on the left */
+  .tech-journey-logo {
+    float: left;
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 15px 10px 0;
+
+    padding: 7px;
+
+    border-radius: 20px;
+  }
+
+  /* Text flows neatly beside the logo */
+  .tech-journey-content {
+    overflow: hidden;
+  }
+
+  .tech-journey-content h2 {
+    font-size: 30px;
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    margin-top: 0;
+  }
+
+  .tech-journey-content p {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+}
+/* =================================
+   WOMEN TECHSTERS BOOTCAMP
+================================= */
+
+  .women-techsters-card {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 35px;
+    background: #13131a;
+    color: #ffffff;
+    transition: 0.3s ease;
+  }
+
+
+/* =================================
+   HEADER
+================================= */
+
+.women-techsters-card .journey-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: -2px;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.women-techsters-logo {
+  float: none;
+
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+
+  margin: 5px 30px 1px 0;
+
+  padding: 10px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.women-techsters-card .about-label {
+  margin: 0 0 18px;
+
+  color: #9389af;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =================================
+   TITLE
+================================= */
+
+.women-techsters-card .journey-title h2 {
+  margin: 0 0 30px;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(25px, 4.3vw, 54px);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+
+
+.women-techsters-card .journey-title h2 span {
+  color: #a78bfa
+}
+
+
+/* =================================
+   SUMMARY
+================================= */
+
+.women-techsters-card .journey-summary p {
+  color: #ffffff;
+  margin: 0 0 25px;
+  line-height: 1.8;
+}
+
+.women-techsters-card .journey-summary p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =================================
+   READ MORE / READ LESS
+================================= */
+
+.women-techsters-card .read-more-btn {
+  margin-top: 20px;
+  padding: 11px 22px;
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.women-techsters-card .read-more-btn:hover {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+.women-techsters-card .read-less-container {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #292932;
+}
+
+/* =================================
+   EXPANDED CONTENT
+================================= */
+
+.women-techsters-card .journey-details {
+  margin-top: 0px;
+  padding-top: 5px;
+  border-top: 1px solid #292932;
+}
+
+.women-techsters-card .journey-details h4 {
+  margin: 25px 0 10px;
+  color: #a78bfa;
+  font-size: 1.1rem;
+}
+
+.women-techsters-card .journey-details h4:first-child {
+  margin-top: 0;
+}
+
+.women-techsters-card .journey-details p {
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.women-techsters-card .journey-details strong {
+  color: #a78bfa;
+
+  font-weight: 600;
+}
+
+/* =================================
+   WOMEN TECHSTERS — VIEW PROJECT
+================================= */
+
+.women-techsters-card .journey-project-link {
+  text-align: center;
+  margin: 35px 0 40px;
+}
+
+.women-techsters-card .journey-project-link a {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background: #8b5cf6;
+  color: #ffffff;
+
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
+}
+
+.women-techsters-card .journey-project-link a:hover {
+  background: #a78bfa;
+  border-color: #a78bfa;
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+}
+
+/* =================================
+   READ LESS AT THE BOTTOM
+================================= */
+
+.women-techsters-card .read-less-container {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #292932;
+}
+
+
+/* =================================
+   WOMEN TECHSTERS — MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .women-techsters-card {
+    padding: 30px 1%;
+    margin: 70px auto;
+  }
+
+  /* =================================
+     LOGO ON THE LEFT
+  ================================= */
+
+  .women-techsters-logo {
+    float: left;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0;
+
+    border-radius: 50px;
+  }
+
+  /* =================================
+     LABEL + HEADING BESIDE LOGO
+  ================================= */
+
+  .women-techsters-card .journey-title {
+    overflow: hidden;
+  }
+
+  .women-techsters-card .about-label {
+    margin: 2px 0 9px;
+
+    font-size: 09px;
+
+    line-height: 1.8;
+
+    letter-spacing: 3px;
+  }
+
+  .women-techsters-card .journey-title h2 {
+    margin: 0;
+
+    font-size: 28px;
+
+    line-height: 0.9;
+
+    letter-spacing: -1px;
+  }
+
+  /* =================================
+     BODY TEXT BELOW LOGO + HEADING
+  ================================= */
+
+  .women-techsters-card .journey-summary {
+    clear: both;
+
+    padding-top: 35px;
+  }
+
+  .women-techsters-card .journey-summary p {
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin: 0 0 20px;
+  }
+
+  /* =================================
+     READ MORE / READ LESS
+  ================================= */
+
+  .women-techsters-card .read-more-btn {
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+  }
+
+  .women-techsters-card .read-less-container {
+    margin-top: 30px;
+
+    padding-top: 22px;
+  }
+
+  /* =================================
+     EXPANDED CONTENT
+  ================================= */
+
+  .women-techsters-card .journey-details {
+    padding-top: 10px;
+  }
+
+  .women-techsters-card .journey-details h4 {
+    margin: 22px 0 10px;
+
+    font-size: 1rem;
+  }
+
+  .women-techsters-card .journey-details p,
+  .women-techsters-card .journey-details li {
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+
+}
+
+/* =========================================================
+   AKWANNYA HUB
+   ========================================================= */
+ .akwannya-hub-card {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #13131a;
+    color: #ffffff;
+    transition: 0.3s ease;
+  }
+
+
+
+/* =================================
+   HEADER
+================================= */
+
+.akwannya-hub-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.akwannya-hub-logo {
+  float: none;
+
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+
+  margin: 5px 30px 1px 0;
+
+  padding: 12px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.akwannya-hub-card .about-label {
+  margin: 0 0 18px;
+
+  color: #9389af;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =================================
+   TITLE
+================================= */
+
+.akwannya-hub-title h2 span {
+  color: #a78bfa
+}
+
+
+.akwannya-hub-title h2 {
+  margin: 0 0 30px;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(22px, 4vw, 54px);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+/* =================================
+   SUMMARY
+================================= */
+
+
+.akwannya-hub-card .journey-summary p {
+  color: #ffffff;
+  margin: 0 0 25px;
+  line-height: 1.8;
+}
+
+.akwannya-hub-card .journey-summary p:last-child {
+  margin-bottom: 0;
+  
+}
+.akwannya-hub-card .journey-summary strong {
+  color: #a78bfa;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   READ MORE / READ LESS
+================================= */
+
+.akwannya-hub-card .read-more-btn {
+  margin-top: 20px;
+  padding: 11px 22px;
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.akwannya-hub-card .read-more-btn:hover {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+.akwannya-hub-card .read-less-container {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #292932;
+}
+
+/* =================================
+  AKWANNYA HUB CONTENT
+================================= */
+
+.akwannya-hub-card .akwannya-hub-content p {
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.akwannya-hub-card .akwannya-hub-content strong {
+  color: #a78bfa;
+
+  font-weight: 600;
+}
+
+
+.akwannya-hub-project-link {
+  text-align: center;
+  margin: 35px 0 60px;
+}
+
+.akwannya-hub-project-link a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #8b5cf6;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.akwannya-hub-project-link a:hover {
+  background: #a78bfa;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+}
+
+
+
+/* =========================================================
+   AKWANNYA HUB — MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .akwannya-hub-card {
+    width: calc(100% - 0px);
+    max-width: none;
+    margin: 25px auto;
+    padding: 22px;
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+
+  /* HEADER — LOGO BESIDE HEADING */
+  .akwannya-hub-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  /* LOGO */
+  .akwannya-hub-logo {
+    flex: 0 0 65px;
+    width: 65px;
+    height: 65px;
+    margin: 0;
+    padding: 7px;
+    border-radius: 13px;
+  }
+
+  /* HEADING AREA */
+  .akwannya-hub-title {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .akwannya-hub-card .about-label {
+    margin: 0 0 8px;
+    font-size: 7px;
+    letter-spacing: 2.5px;
+  }
+
+  .akwannya-hub-title h2 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  /* SUMMARY */
+  .akwannya-hub-card .journey-summary p {
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* READ MORE */
+  .akwannya-hub-card .read-more-btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  /* CONTENT */
+  .akwannya-hub-card .akwannya-hub-content p {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* READ LESS */
+  .akwannya-hub-card .read-less-container {
+    margin-top: 25px;
+    padding-top: 20px;
+  }
+
+  /* PROJECT LINK */
+  .akwannya-hub-project-link {
+    margin: 25px 0 40px;
+    padding: 0 15px;
+  }
+
+  .akwannya-hub-project-link a {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+
+}

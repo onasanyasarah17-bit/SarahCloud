@@ -1,0 +1,435 @@
+<section class="blog">
+
+  <!-- =========================================
+       INTRO
+  ========================================= -->
+
+  <div class="blog-intro">
+
+    <span class="intro-label">
+      MY JOURNEY • MY MEMORIES  
+    </span>
+
+    <h1>
+      Stories, Moments, 
+      <span>Fashion & Creativity.</span>
+    </h1>
+
+    <p>
+     A collection of stories, memories, creative moments, and fashion pieces that reflect the experiences, people, and moments that have become part of my journey.
+
+    </p>
+
+  </div>
+
+
+  <!-- =========================================
+       BLOG POSTS
+  ========================================= -->
+
+  <div class="posts-container">
+
+    @for (post of blogPosts; track post.id) {
+
+      <article class="memory-post">
+
+        <!-- =====================================
+             POST HEADER
+        ====================================== -->
+
+        <header class="post-header">
+
+          <div class="post-category">
+            {{ post.category }}
+          </div>
+
+          <h2>
+            {{ post.title }}
+          </h2>
+
+          <div class="post-date">
+            {{ post.date }}
+          </div>
+
+        </header>
+
+
+        <!-- =====================================
+             STORY
+        ====================================== -->
+
+        <div class="post-story">
+
+          @if (!post.expanded) {
+
+            @for (
+              paragraph of post.content.slice(0, 1);
+              track paragraph
+            ) {
+
+              <p>
+                {{ paragraph }}
+              </p>
+
+            }
+
+            @if (post.content.length > 3) {
+
+              <button
+                type="button"
+                class="more-text"
+                (click)="toggleExpanded(post)"
+              >
+                Read more
+              </button>
+
+            }
+
+          } @else {
+
+            @for (
+              paragraph of post.content;
+              track paragraph
+            ) {
+
+              <p>
+                {{ paragraph }}
+              </p>
+
+            }
+
+            <button
+              type="button"
+              class="less-text"
+              (click)="toggleExpanded(post)"
+            >
+              See less
+            </button>
+
+          }
+
+        </div>
+
+
+        <!-- =====================================
+             PHOTO JOURNAL
+        ====================================== -->
+
+        @if (post.images.length > 0) {
+
+          <section class="photo-section">
+
+            <div class="photo-header">
+
+              <div>
+
+                <span class="photo-label">
+                  PHOTO JOURNAL
+                </span>
+
+                <h3>
+                  Moments to Remember
+                </h3>
+
+              </div>
+
+              <span class="photo-count">
+
+                {{ post.images.length }}
+
+                {{ post.images.length === 1
+                  ? 'photo'
+                  : 'photos'
+                }}
+
+              </span>
+
+            </div>
+
+
+            <!-- =================================
+                 PHOTO GRID
+            ================================== -->
+
+            <div class="photo-grid">
+
+  @for (
+    image of post.images;
+    track image;
+    let i = $index
+  ) {
+
+    <div class="photo-item">
+
+      <!-- PHOTO -->
+
+      <button
+        type="button"
+        class="photo-card"
+        (click)="openImage(post, i)"
+        [attr.aria-label]="
+          'View photo ' + (i + 1) + ' larger'
+        "
+      >
+
+        <img
+          [src]="image"
+          [alt]="
+            post.title +
+            ' photo ' +
+            (i + 1)
+          "
+          loading="lazy"
+        />
+
+        <span class="photo-overlay">
+
+          <span class="view-icon">
+            ⤢
+          </span>
+
+        </span>
+
+      </button>
+
+
+      <!-- CAPTION -->
+
+      @if (i === 0) {
+
+        <p class="photo-caption">
+         The dress I made myself for the She Code Africa Summit
+        </p>
+
+      }
+
+      @if (i === 1) {
+
+        <p class="photo-caption">
+         A moment with my tech partner, Olamide Folorunso.
+        </p>
+
+      }
+
+      @if (i === 2) {
+
+        <p class="photo-caption">
+        
+        </p>
+
+      }
+
+      @if (i === 3) {
+
+        <p class="photo-caption">
+          A special moment with Oreoluwa Adetula.
+        </p>
+
+      }
+
+      @if (i === 4) {
+
+        <p class="photo-caption">
+         A memorable moment with my DevOps tutor, Mary Mbaoma.
+        </p>
+
+      }
+
+      @if (i === 5) {
+
+        <p class="photo-caption">
+          I have grown wings.
+        </p>
+
+      }
+
+      @if (i === 6) {
+
+        <p class="photo-caption">
+        
+        </p>
+
+      }
+
+      @if (i === 7) {
+
+        <p class="photo-caption">
+    
+        </p>
+
+      }
+
+      @if (i === 8) {
+
+        <p class="photo-caption">
+
+        </p>
+
+      }
+
+      @if (i === 9) {
+
+        <p class="photo-caption">
+        Moment with Apify team  .
+        </p>
+
+      }
+
+      @if (i === 10) {
+
+        <p class="photo-caption">
+          
+        </p>
+
+      }
+
+      @if (i === 11) {
+
+        <p class="photo-caption">
+          One more memory to keep from #SCASUMMIT26.
+        </p>
+
+      }
+
+    </div>
+
+  }
+
+</div>
+
+          </section>
+
+        }
+
+
+        <!-- =====================================
+             HASHTAGS
+        ====================================== -->
+
+        @if (post.hashtags.length > 0) {
+
+          <div class="hashtags">
+
+            @for (
+              tag of post.hashtags;
+              track tag
+            ) {
+
+              <span>
+                {{ tag }}
+              </span>
+
+            }
+
+          </div>
+
+        }
+
+      </article>
+
+    }
+
+  </div>
+
+
+  <!-- =========================================
+       IMAGE LIGHTBOX
+  ========================================= -->
+
+  @if (selectedImage) {
+
+    <div
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+      (click)="closeImage()"
+    >
+
+      <!-- CLOSE -->
+
+      <button
+        type="button"
+        class="lightbox-close"
+        aria-label="Close image viewer"
+        (click)="closeImage(); $event.stopPropagation()"
+      >
+        ×
+      </button>
+
+
+      <!-- PREVIOUS -->
+
+      @if (
+        selectedPost &&
+        selectedPost.images.length > 1
+      ) {
+
+        <button
+          type="button"
+          class="lightbox-arrow previous"
+          aria-label="Previous photo"
+          (click)="previousImage(); $event.stopPropagation()"
+        >
+          ‹
+        </button>
+
+      }
+
+
+      <!-- IMAGE -->
+
+      <div
+        class="lightbox-content"
+        (click)="$event.stopPropagation()"
+      >
+
+        <img
+          [src]="selectedImage"
+          [alt]="
+            selectedPost?.title ||
+            'Blog image'
+          "
+        />
+
+        @if (
+          selectedPost &&
+          selectedPost.images.length > 1
+        ) {
+
+          <div class="image-counter">
+
+            {{ selectedImageIndex + 1 }}
+            /
+            {{ selectedPost.images.length }}
+
+          </div>
+
+        }
+
+      </div>
+
+
+      <!-- NEXT -->
+
+      @if (
+        selectedPost &&
+        selectedPost.images.length > 1
+      ) {
+
+        <button
+          type="button"
+          class="lightbox-arrow next"
+          aria-label="Next photo"
+          (click)="nextImage(); $event.stopPropagation()"
+        >
+          ›
+        </button>
+
+      }
+
+    </div>
+
+  }
+
+</section>

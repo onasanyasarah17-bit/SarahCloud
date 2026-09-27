@@ -1,0 +1,686 @@
+
+<section class="project-header">
+
+  <div class="project-label">
+    TEAM PROJECT
+  </div>
+
+  <h1>Linux Server Health Auditor</h1>
+
+  <div class="project-meta">
+
+    <div class="meta-item">
+      <span class="meta-label">PROJECT DATE</span>
+      <span class="meta-value">[May, 2026]</span>
+    </div>
+
+    <div class="meta-item">
+      <span class="meta-label">PROJECT TYPE</span>
+      <span class="meta-value">Team Project</span>
+    </div>
+
+    <div class="meta-item">
+      <span class="meta-label">MY ROLE</span>
+      <span class="meta-value">Reporting &amp; Logging</span>
+    </div>
+
+  </div>
+
+  <div class="team-section">
+
+    <span class="meta-label">PROJECT TEAM MEMBERS</span>
+
+    <div class="team-members">
+      <span>Sarah Ibukunoluwa Onasanya</span>
+      <span>Olamide Folorunsho</span>
+      <span>Cherish Ogar</span>
+      <span>Itunu Adedoyin</span>
+      <span>Ayomide Oluwole</span>
+      <span>Maryam Amunigun</span>
+      <span>Sochima Madueke</span>
+      <span>Chinenye Agu</span>
+      <span>Ngozi Njoku</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="project-overview">
+
+  <div class="section-heading">
+    <span class="section-number">01</span>
+    <span class="section-label">PROJECT OVERVIEW</span>
+  </div>
+
+  <h2>Understanding the project</h2>
+
+  <p>
+    The Linux Server Health Auditor is a Bash-based system administration
+    The Linux Server Health Auditor is a team-based system administration project designed to provide a simple and structured way to assess the health of a Linux server. It was built to make routine server monitoring more consistent, helping administrators gain a clearer view of system conditions and identify issues that may require attention.
+  </p>
+
+</section>
+
+
+<section class="project-problem">
+
+  <div class="section-heading">
+    <span class="section-number">02</span>
+    <span class="section-label">THE PROBLEM</span>
+  </div>
+
+  <h2>Why was it needed?</h2>
+<p> A Linux server can experience performance and availability issues when critical resources or services are not regularly monitored. High CPU or memory usage, limited disk space, network connectivity problems, excessive processes, or unexpected port conditions can affect the reliability of a system. </p> <p> Relying on manual checks makes it harder to consistently monitor these conditions and maintain a clear record of what was happening on the server at a particular time. </p> <p> The challenge was therefore to create a simple and repeatable way to check key areas of server health, identify abnormal conditions through defined thresholds, and produce structured results that could be recorded and reviewed. </p>
+</section>
+
+<!-- =========================================================
+     THE SOLUTION
+     ========================================================= -->
+
+<section class="project-solution">
+
+  <div class="section-heading">
+    <span class="section-number">03</span>
+    <span class="section-label">THE SOLUTION</span>
+  </div>
+
+  <h2>Automating Linux server health monitoring</h2>
+
+  <p>
+    Our team developed a Bash-based Linux Server Health Auditor to automate
+    essential server health checks and provide a structured view of system
+    conditions.
+  </p>
+
+  <p>
+    The auditor monitors six critical areas of a Linux server: CPU usage,
+    memory usage, disk usage, network connectivity, running processes, and
+    ports. Each metric is evaluated against defined thresholds and assigned
+    one of three health statuses: <strong>OK</strong>,
+    <strong>WARNING</strong>, or <strong>CRITICAL</strong>.
+  </p>
+
+  <p>
+    The results are generated in JSON format with timestamps, making the
+    audit output structured, machine-readable, and suitable for further
+    reporting, logging, and monitoring.
+  </p>
+
+</section>
+
+
+<!-- =========================================================
+     TECHNOLOGIES & TOOLS
+     ========================================================= -->
+
+<section class="project-tools">
+
+  <div class="section-heading">
+    <span class="section-number">04</span>
+    <span class="section-label">TECHNOLOGIES &amp; TOOLS</span>
+  </div>
+
+  <h2>The tools behind the auditor</h2>
+
+  <div class="tools-grid">
+
+    <div class="tool-item">
+      <h3>Linux</h3>
+      <p>
+        The operating system environment where the health auditor runs
+        and collects system-level information.
+      </p>
+    </div>
+
+    <div class="tool-item">
+      <h3>Bash</h3>
+      <p>
+        Used to automate the health checks, process system information,
+        evaluate thresholds, and generate the audit results.
+      </p>
+    </div>
+
+    <div class="tool-item">
+      <h3>/proc/stat</h3>
+      <p>
+        Used by the script to access CPU-related information directly
+        from the Linux kernel.
+      </p>
+    </div>
+
+    <div class="tool-item">
+      <h3>/proc/meminfo</h3>
+      <p>
+        Used to retrieve memory information from the Linux kernel.
+      </p>
+    </div>
+
+    <div class="tool-item">
+      <h3>df</h3>
+      <p>
+        Used to collect disk usage information from the Linux filesystem.
+      </p>
+    </div>
+
+    <div class="tool-item">
+      <h3>JSON</h3>
+      <p>
+        Used as the structured output format for timestamped health
+        audit results.
+      </p>
+    </div>
+
+    <div class="tool-item">
+      <h3>Git &amp; GitHub</h3>
+      <p>
+        Used for version control, collaboration, and managing the
+        team's project repository.
+      </p>
+    </div>
+
+    <div class="tool-item">
+      <h3>Prometheus</h3>
+      <p>
+        Used locally to scrape the generated metrics and make them
+        available for monitoring and dashboard visualization.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HOW IT WORKS
+     ========================================================= -->
+<section class="project-workflow">
+
+  <div class="section-heading">
+    <span class="section-number">05</span>
+    <span class="section-label">SYSTEM ARCHITECTURE</span>
+  </div>
+
+  <h2>System Architecture</h2>
+
+  <p class="architecture-intro">
+    The Linux Server Health Auditor collects system health metrics,
+    processes the data through a Bash-based monitoring script, and
+    generates structured reports for analysis and monitoring.
+  </p>
+
+  <div class="architecture-diagram">
+    <img
+      src="/images/linux-server-architecture.png"
+      alt="Linux Server Health Auditor system architecture diagram"
+    />
+  </div>
+
+  <p class="architecture-caption">
+    Architecture of the Linux Server Health Auditor showing the flow
+    from system metrics collection to reporting and monitoring.
+  </p>
+
+</section>
+
+<!-- =========================================================
+     MY CONTRIBUTION
+     ========================================================= -->
+
+<section class="my-contribution">
+
+  <div class="section-heading">
+    <span class="section-number">06</span>
+    <span class="section-label">MY CONTRIBUTION</span>
+  </div>
+
+  <div class="contribution-header">
+    <span class="contribution-icon">📊</span>
+
+    <div>
+      <span class="contribution-label">MY ROLE</span>
+      <h2>Reporting &amp; Logging</h2>
+    </div>
+  </div>
+
+  <p class="contribution-intro">
+    I was part of the Reporting &amp; Logging team, responsible for turning
+    the auditor's health-check results into structured, readable, and
+    traceable output. My contribution focused on the final stage of the
+    auditing process — ensuring that the information produced by the system
+    could be clearly presented, consistently formatted, and preserved for
+    future review and monitoring.
+  </p>
+
+  <p class="contribution-intro">
+    This involved working across both human-readable and machine-readable
+    output, as well as establishing a reliable logging structure that
+    captured audit results with timestamps. The goal was to make every
+    health check more than a one-time terminal output by creating a clear
+    record of what the system reported and when it was reported.
+  </p>
+
+
+  <div class="contribution-tasks">
+
+    <div class="contribution-task">
+      <span class="task-number">01</span>
+
+      <div>
+        <h3>Designed the Reporting Output</h3>
+
+        <p>
+          Worked on how health-check results were presented so that system
+          conditions could be quickly understood and interpreted without
+          having to examine raw command output.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="contribution-task">
+      <span class="task-number">02</span>
+
+      <div>
+        <h3>Structured Machine-Readable Results</h3>
+
+        <p>
+          Worked on generating structured output, including JSON, allowing
+          audit results to be consumed by other tools and systems rather
+          than being limited to human-readable terminal output.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="contribution-task">
+      <span class="task-number">03</span>
+
+      <div>
+        <h3>Implemented Timestamped Logging</h3>
+
+        <p>
+          Implemented file-based logging to preserve health-audit results
+          with timestamps, creating a historical record that could be
+          reviewed when investigating system conditions.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="contribution-task">
+      <span class="task-number">04</span>
+
+      <div>
+        <h3>Established Consistent Output Structure</h3>
+
+        <p>
+          Helped ensure that results from different health checks followed
+          a consistent and predictable format, making the reports easier
+          to read, compare, store, and process.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="contribution-task">
+      <span class="task-number">05</span>
+
+      <div>
+        <h3>Supported Monitoring Integration</h3>
+
+        <p>
+          Structured the generated results in a way that supported the
+          project's wider monitoring workflow, including the use of
+          machine-readable metrics for monitoring with Prometheus.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CHALLENGES & SOLUTIONS
+     ========================================================= -->
+
+<section class="project-challenges">
+
+  <div class="section-heading">
+    <span class="section-number">07</span>
+    <span class="section-label">CHALLENGES &amp; SOLUTIONS</span>
+  </div>
+
+  <h2>What we encountered and how we solved it</h2>
+
+  <p class="section-intro">
+    Building the auditor as a team came with challenges that required us
+    to test our approach, troubleshoot issues, and refine how the system
+    handled and presented health-check information.
+  </p>
+
+
+  <div class="challenge-list">
+
+    <!-- Challenge 01 -->
+    <article class="challenge-item">
+
+      <div class="challenge-number">01</div>
+
+      <div class="challenge-content">
+
+        <div class="challenge-label">CHALLENGE</div>
+
+        <h3>Working with raw system information</h3>
+
+        <p>
+          Collecting information directly from Linux system sources such as
+          <code>/proc/stat</code> and <code>/proc/meminfo</code> produced
+          raw values that were not immediately meaningful to users.
+        </p>
+
+        <div class="solution-block">
+
+          <span class="solution-label">HOW WE SOLVED IT</span>
+
+          <p>
+            We processed the collected values and structured the results
+            into clear health-check output, making the information easier
+            to interpret and use.
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Challenge 02 -->
+    <article class="challenge-item">
+
+      <div class="challenge-number">02</div>
+
+      <div class="challenge-content">
+
+        <div class="challenge-label">CHALLENGE</div>
+
+        <h3>Keeping output consistent</h3>
+
+        <p>
+          With multiple system checks producing different types of
+          information, maintaining a consistent structure across the
+          results was important for both readability and further processing.
+        </p>
+
+        <div class="solution-block">
+
+          <span class="solution-label">HOW WE SOLVED IT</span>
+
+          <p>
+            We established a consistent output structure and used JSON for
+            machine-readable results, allowing information from different
+            checks to follow a predictable format.
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Challenge 03 -->
+    <article class="challenge-item">
+
+      <div class="challenge-number">03</div>
+
+      <div class="challenge-content">
+
+        <div class="challenge-label">CHALLENGE</div>
+
+        <h3>Preserving audit history</h3>
+
+        <p>
+          A health check is more useful when its results can be reviewed
+          after the script finishes. Relying only on terminal output would
+          make previous audit results difficult to track.
+        </p>
+
+        <div class="solution-block">
+
+          <span class="solution-label">HOW WE SOLVED IT</span>
+
+          <p>
+            We implemented file-based logging with timestamps so that
+            audit results could be stored and referenced later for review
+            and troubleshooting.
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Challenge 04 -->
+    <article class="challenge-item">
+
+      <div class="challenge-number">04</div>
+
+      <div class="challenge-content">
+
+        <div class="challenge-label">CHALLENGE</div>
+
+        <h3>Making results useful beyond the terminal</h3>
+
+        <p>
+          The auditor needed to produce results that could support both
+          human review and integration with monitoring tools rather than
+          being limited to terminal output.
+        </p>
+
+        <div class="solution-block">
+
+          <span class="solution-label">HOW WE SOLVED IT</span>
+
+          <p>
+            We separated human-readable reporting from machine-readable
+            output and structured the results so they could also support
+            the project's monitoring workflow with Prometheus.
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Challenge 05 -->
+    <article class="challenge-item">
+
+      <div class="challenge-number">05</div>
+
+      <div class="challenge-content">
+
+        <div class="challenge-label">CHALLENGE</div>
+
+        <h3>Coordinating work across the team</h3>
+
+        <p>
+          Because different members were responsible for different parts
+          of the auditor, keeping the components aligned was essential
+          for producing a working and consistent final result.
+        </p>
+
+        <div class="solution-block">
+
+          <span class="solution-label">HOW WE SOLVED IT</span>
+
+          <p>
+            We divided responsibilities across the project and worked
+            collaboratively to ensure that the health checks, reporting,
+            logging, and monitoring components worked together as one system.
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     WHAT I LEARNED
+     ========================================================= -->
+
+<section class="project-learnings">
+
+  <div class="section-heading">
+    <span class="section-number">08</span>
+    <span class="section-label">WHAT I LEARNED</span>
+  </div>
+
+  <h2>Lessons from building the auditor</h2>
+
+  <p class="section-intro">
+    Working on this project strengthened my practical understanding of Linux
+    system administration and showed me how individual components come
+    together to form a complete monitoring solution.
+  </p>
+
+  <div class="learning-grid">
+
+    <div class="learning-item">
+      <span class="learning-number">01</span>
+      <h3>Linux System Monitoring</h3>
+      <p>
+        Gained practical experience working with Linux system information
+        and understanding how server resources can be monitored.
+      </p>
+    </div>
+
+    <div class="learning-item">
+      <span class="learning-number">02</span>
+      <h3>Bash Scripting</h3>
+      <p>
+        Strengthened my ability to work with Bash for automating system
+        checks and processing server information.
+      </p>
+    </div>
+
+    <div class="learning-item">
+      <span class="learning-number">03</span>
+      <h3>Reporting &amp; Logging</h3>
+      <p>
+        Developed a better understanding of how technical results can be
+        structured, presented, timestamped, and preserved for later review.
+      </p>
+    </div>
+
+    <div class="learning-item">
+      <span class="learning-number">04</span>
+      <h3>Team Collaboration</h3>
+      <p>
+        Learned how to coordinate individual responsibilities and integrate
+        different project components into a unified solution.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECT OUTCOME
+     ========================================================= -->
+
+<section class="project-outcome">
+
+  <div class="section-heading">
+    <span class="section-number">09</span>
+    <span class="section-label">PROJECT OUTCOME</span>
+  </div>
+
+  <h2>From manual checks to structured monitoring</h2>
+
+  <p>
+    The project resulted in a functional Linux Server Health Auditor capable
+    of carrying out essential server health checks and producing structured
+    results for review and monitoring.
+  </p>
+
+  <div class="outcome-points">
+
+    <div class="outcome-point">
+      <span>✓</span>
+      <p>Automated essential Linux server health checks</p>
+    </div>
+
+    <div class="outcome-point">
+      <span>✓</span>
+      <p>Produced clear and structured audit results</p>
+    </div>
+
+    <div class="outcome-point">
+      <span>✓</span>
+      <p>Implemented timestamped logging for audit history</p>
+    </div>
+
+    <div class="outcome-point">
+      <span>✓</span>
+      <p>Generated machine-readable output for further processing</p>
+    </div>
+
+    <div class="outcome-point">
+      <span>✓</span>
+      <p>Supported integration with a local Prometheus monitoring workflow</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECT EVIDENCE
+     ========================================================= -->
+
+<section class="project-evidence">
+
+  <div class="section-heading">
+    <span class="section-number">10</span>
+    <span class="section-label">PROJECT EVIDENCE</span>
+  </div>
+
+  <h2>Explore the project</h2>
+
+  <p>
+    The complete project, including the source code and supporting
+    documentation, is available in the team's GitHub repository.
+  </p>
+
+  <a
+    href="https://github.com/DevOps-Capstone-Project-Group-4/Linux-server-health-auditor"
+    class="github-button"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span>View on GitHub</span>
+    <span class="github-arrow">↗</span>
+  </a>
+
+</section>
+
+
+

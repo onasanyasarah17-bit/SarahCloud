@@ -1,0 +1,902 @@
+/* =========================================================
+   LINUX SERVER HEALTH AUDITOR — PROJECT DOCUMENTATION
+   ========================================================= */
+
+
+/* =========================================================
+   COMPONENT / FULL PAGE BACKGROUND
+   ========================================================= */
+
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+
+  background: #05030d;
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+}
+
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE BASE
+   ========================================================= */
+
+.project-header,
+.project-overview,
+.project-problem,
+.project-solution,
+.project-tools,
+.project-workflow,
+.my-contribution,
+.project-challenges,
+.project-learnings,
+.project-outcome,
+.project-evidence {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 90px 0;
+
+  background: transparent;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.project-header p,
+.project-overview p,
+.project-problem p,
+.project-solution p,
+.project-tools p,
+.project-workflow p,
+.my-contribution p,
+.project-challenges p,
+.project-learnings p,
+.project-outcome p,
+.project-evidence p {
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROJECT HEADER
+   ========================================================= */
+
+.project-header {
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+  text-align: center;
+  position: relative;
+}
+
+.project-label {
+  display: inline-block;
+
+  padding: 7px 16px;
+  margin-bottom: 25px;
+
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 50px;
+
+  color: #ffffff;
+  background: rgba(167, 139, 250, 0.07);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.project-header h1 {
+  margin: 0 auto 55px;
+  max-width: 850px;
+
+  color: #a78bfa;
+
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   PROJECT META
+   ========================================================= */
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 850px;
+  margin: 0 auto 65px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meta-item {
+  padding: 25px 20px;
+
+  text-align: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meta-item:last-child {
+  border-right: none;
+}
+
+.meta-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #a78bfa;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.meta-value {
+  color: #e9e9ee;
+  font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   TEAM
+   ========================================================= */
+
+.team-section {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.team-members span {
+  padding: 9px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: #d9d9df;
+
+  font-size: 0.82rem;
+
+  transition: 0.3s ease;
+}
+
+.team-members span:hover {
+  border-color: rgba(167, 139, 250, 0.5);
+  color: #a78bfa;
+}
+
+
+/* =========================================================
+   GENERAL SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.section-number {
+  color: #9999a8;
+
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.section-label {
+  color: #9999a8;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.project-overview h2,
+.project-problem h2,
+.project-solution h2,
+.project-tools h2,
+.project-workflow h2,
+.my-contribution h2,
+.project-challenges h2,
+.project-learnings h2,
+.project-outcome h2,
+.project-evidence h2 {
+  margin: 0 0 25px;
+
+  color: #c084fc;
+
+  font-size: clamp(2rem, 3vw, 3.3rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.project-overview p,
+.project-problem p,
+.project-solution p,
+.project-evidence p {
+  max-width: 850px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   OVERVIEW / PROBLEM / SOLUTION
+   ========================================================= */
+
+.project-overview,
+.project-problem,
+.project-solution {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-problem {
+  position: relative;
+}
+
+.project-problem p,
+.project-solution p {
+  margin-bottom: 20px;
+}
+
+.project-problem p:last-child,
+.project-solution p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES & TOOLS
+   ========================================================= */
+
+.project-tools {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.tool-item {
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-4px);
+
+  border-color: #c084fc;
+
+  background: rgba(255, 79, 174, 0.035);
+}
+
+.tool-item h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-family: monospace;
+  font-size: 1.05rem;
+}
+
+.tool-item h3::before {
+  content: "$ ";
+
+  color: #c084fc;
+}
+
+.tool-item p {
+  margin: 0;
+
+  color: #9999a8;
+
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SYSTEM ARCHITECTURE
+   ========================================================= */
+
+.project-workflow {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.architecture-intro {
+  max-width: 800px;
+
+  margin: 0 0 45px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* ---------- ARCHITECTURE DIAGRAM ---------- */
+
+.architecture-diagram {
+  width: 100%;
+  padding: 35px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  background: #1b0d2b;
+
+  overflow: hidden;
+}
+
+.architecture-diagram img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+}
+
+
+/* ---------- DIAGRAM CAPTION ---------- */
+
+.architecture-caption {
+  max-width: 800px;
+
+  margin: 18px 0 0;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MY CONTRIBUTION
+   ========================================================= */
+
+.my-contribution {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.contribution-header {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+  margin: 35px 0 30px;
+}
+
+.contribution-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid rgba(255, 79, 174, 0.4);
+  border-radius: 14px;
+
+  background: rgba(255, 79, 174, 0.08);
+
+  font-size: 1.5rem;
+}
+
+.contribution-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #c084fc;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.contribution-header h2 {
+  margin: 0;
+}
+
+.contribution-intro {
+  max-width: 900px;
+
+  color: #ffffff;
+}
+
+.contribution-tasks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.contribution-task {
+  display: flex;
+
+  gap: 22px;
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition: 0.3s ease;
+}
+
+.contribution-task:hover {
+  border-color: #c084fc;
+
+  transform: translateY(-3px);
+}
+
+.task-number {
+  flex-shrink: 0;
+
+  color: #c084fc;
+
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.contribution-task h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+}
+
+.contribution-task p {
+  margin: 0;
+
+  color: #9999a8;
+
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CHALLENGES & SOLUTIONS
+   ========================================================= */
+
+.project-challenges {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.section-intro {
+  max-width: 780px;
+
+  color: #ffffff;
+}
+
+.challenge-list {
+  margin-top: 50px;
+}
+
+.challenge-item {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+
+  gap: 25px;
+  padding: 45px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.challenge-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.challenge-number {
+  color: #c084fc;
+
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.challenge-label,
+.solution-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.challenge-label {
+  color: #c084fc;
+}
+
+.challenge-content h3 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: 1.3rem;
+}
+
+.challenge-content > p {
+  max-width: 800px;
+
+  margin-bottom: 25px;
+
+  color: #9999a8;
+
+  font-size: 0.9rem;
+}
+
+.challenge-content code {
+  padding: 3px 7px;
+
+  border-radius: 4px;
+
+  background: rgba(255, 79, 174, 0.08);
+
+  color: #c084fc;
+
+  font-family: monospace;
+}
+
+.solution-block {
+  max-width: 800px;
+
+  padding: 22px 25px;
+
+  border-left: 2px solid #c084fc;
+
+  background: rgba(255, 79, 174, 0.035);
+}
+
+.solution-label {
+  color: #c084fc;
+}
+
+.solution-block p {
+  margin: 0;
+
+  color: #b8b8c4;
+
+  font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   WHAT I LEARNED
+   ========================================================= */
+
+.project-learnings {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.learning-item {
+  padding: 32px;
+
+  border: 1px solid #c084fc;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.learning-number {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #c084fc;
+
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.learning-item h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 1.05rem;
+}
+
+.learning-item p {
+  margin: 0;
+
+  color: #9999a8;
+
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROJECT OUTCOME
+   ========================================================= */
+
+.project-outcome {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-outcome > p {
+  max-width: 800px;
+
+  color: #ffffff;
+}
+
+.outcome-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+
+  max-width: 900px;
+  margin-top: 45px;
+}
+
+.outcome-point {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+  padding: 18px 20px;
+
+  border: 1px solid #f3ebfd;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.outcome-point span {
+  flex-shrink: 0;
+
+  color: #c084fc;
+
+  font-weight: 700;
+}
+
+.outcome-point p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   PROJECT EVIDENCE
+   ========================================================= */
+
+.project-evidence {
+  padding-bottom: 130px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-evidence p {
+  margin-bottom: 35px;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 25px;
+  padding: 15px 22px;
+
+  border: 1px solid #c084fc;
+  border-radius: 8px;
+
+  background: rgba(192, 132, 252, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.github-button:hover {
+  background: #c084fc;
+  border-color: #c084fc;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+}
+
+.github-arrow {
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .project-header,
+  .project-overview,
+  .project-problem,
+  .project-solution,
+  .project-tools,
+  .project-workflow,
+  .my-contribution,
+  .project-challenges,
+  .project-learnings,
+  .project-outcome,
+  .project-evidence {
+    width: min(92%, 700px);
+    padding: 70px 0;
+  }
+
+  .project-header {
+    padding-top: 120px;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .meta-item:last-child {
+    border-bottom: none;
+  }
+
+  .tools-grid,
+  .contribution-tasks,
+  .learning-grid,
+  .outcome-points {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .project-header,
+  .project-overview,
+  .project-problem,
+  .project-solution,
+  .project-tools,
+  .project-workflow,
+  .my-contribution,
+  .project-challenges,
+  .project-learnings,
+  .project-outcome,
+  .project-evidence {
+    width: 90%;
+    padding: 55px 0;
+  }
+
+  .project-header {
+    padding-top: 100px;
+  }
+
+  .project-header h1 {
+    font-size: 3rem;
+  }
+
+  .team-members {
+    gap: 7px;
+  }
+
+  .team-members span {
+    font-size: 0.75rem;
+  }
+
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-step {
+    min-height: auto;
+  }
+
+  .challenge-item {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+
+  .contribution-task {
+    padding: 24px;
+  }
+
+  .section-heading {
+    gap: 10px;
+  }
+
+  .project-overview h2,
+  .project-problem h2,
+  .project-solution h2,
+  .project-tools h2,
+  .project-workflow h2,
+  .my-contribution h2,
+  .project-challenges h2,
+  .project-learnings h2,
+  .project-outcome h2,
+  .project-evidence h2 {
+    font-size: 2rem;
+  }
+}

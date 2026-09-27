@@ -1,0 +1,1568 @@
+/* =========================================================
+   FRESHBASKET — PROJECT DOCUMENTATION
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL PROJECT WRAPPER
+   ========================================================= */
+
+.freshbasket-project {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  background: #0d0d12;
+  overflow: hidden;
+}
+
+.freshbasket-project * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROJECT HEADER
+   ========================================================= */
+
+.freshbasket-header {
+  padding: 100px 0 80px;
+  text-align: left;
+}
+
+.freshbasket-header .project-label {
+  margin-bottom: 20px;
+  color: #897fa8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.freshbasket-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(52px, 7vw, 110px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -4px;
+}
+
+.freshbasket-header h1 span {
+  color: #a78bfa;
+}
+
+.project-tagline {
+  max-width: 600px;
+  margin: 25px 0 45px;
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TEAM
+   ========================================================= */
+
+.team-intro {
+  max-width: 800px;
+  margin: -15px 0 20px;
+  color: #ffffff;
+  line-height: 1.9;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.team-member {
+  padding: 28px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+}
+
+.team-member > span {
+  display: block;
+  margin-bottom: 22px;
+  color: #a78bfa;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.team-member h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+}
+
+.team-member p {
+  margin: 0;
+  color: #9999a6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TEAM — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member {
+    padding: 23px;
+  }
+
+}
+
+/* =========================================================
+   PROJECT META
+   ========================================================= */
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 850px;
+}
+
+.meta-item {
+  padding: 20px 22px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 12px;
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #a78bfa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.meta-value {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+   ========================================================= */
+
+.project-section {
+  padding: 100px 0;
+  border-top: 1px solid #24242d;
+}
+
+.section-label {
+  margin-bottom: 15px;
+  color: #a78bfa;
+  font-size: 10px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 850px;
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(30px, 5vw, 62px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -3px;
+}
+
+.section-heading h2 span {
+  color: #a78bfa;
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.overview-content {
+  display: flex;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  gap: 60px;
+  align-items: stretch;
+}
+
+.overview-text p {
+  margin: 0 0 25px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.overview-text p:last-child {
+  margin-bottom: 0;
+}
+
+.overview-highlight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+  padding: 35px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 18px;
+}
+
+.highlight-number {
+  margin-bottom: 20px;
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.overview-highlight h3 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.overview-highlight p {
+  margin: 0;
+  color: #a9a9b5;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROBLEM SECTION
+   ========================================================= */
+
+.problem-intro {
+  max-width: 760px;
+  margin-bottom: 50px;
+}
+
+.problem-intro p {
+  margin: 0;
+  color: #c5c5cf;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SYNCHRONOUS FLOW
+   ========================================================= */
+
+.sync-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 55px;
+  padding: 25px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+.flow-item {
+  flex: 1;
+  min-width: 110px;
+  text-align: center;
+}
+
+.flow-item span {
+  display: block;
+  margin-bottom: 8px;
+  color: #8b5cf6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.flow-item strong {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.flow-arrow {
+  flex-shrink: 0;
+  color: #666675;
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   PROBLEM CARDS
+   ========================================================= */
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.problem-card {
+  padding: 30px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+}
+
+.problem-number {
+  display: block;
+  margin-bottom: 25px;
+  color: #8b5cf6;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.problem-card h3 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+}
+
+.problem-card p {
+  margin: 0;
+  color: #a9a9b5;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SOLUTION
+   ========================================================= */
+
+.solution-content {
+  max-width: 900px;
+}
+
+.solution-content > p {
+  max-width: 760px;
+  margin: 0 0 45px;
+  color: #c9c9d2;
+  line-height: 1.9;
+}
+
+.event-principle {
+  padding: 35px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 18px;
+}
+
+.principle-main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.principle-main span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  padding: 18px 25px;
+  background: #8b5cf6;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.principle-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.principle-items div {
+  padding: 20px;
+  text-align: center;
+  background: #101016;
+  border: 1px solid #292932;
+  border-radius: 12px;
+}
+
+.principle-items strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #ffffff;
+}
+
+.principle-items span {
+  color: #8f8f9e;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+   ========================================================= */
+
+.architecture-intro {
+  max-width: 800px;
+  margin-bottom: 45px;
+}
+
+.architecture-intro p {
+  margin: 0;
+  color: #c9c9d2;
+  line-height: 1.9;
+}
+
+.architecture-image {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.architecture-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.architecture-caption {
+  margin-bottom: 70px;
+}
+
+.architecture-caption span {
+  display: block;
+  margin-bottom: 10px;
+  color: #8b5cf6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.architecture-caption p {
+  margin: 0;
+  color: #9999a6;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   REQUEST FLOW
+   ========================================================= */
+
+.architecture-flow {
+  margin-top: 60px;
+}
+
+.flow-heading {
+  margin-bottom: 30px;
+}
+
+.flow-heading > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #8b5cf6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.flow-heading h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.flow-heading h3 span {
+  color: #a78bfa;
+}
+
+.flow-image {
+  padding: 20px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.flow-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   FRONTEND HOSTING
+   ========================================================= */
+
+.hosting-flow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+.hosting-step {
+  flex: 1;
+  min-width: 170px;
+  padding: 28px 20px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.hosting-step > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hosting-step strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.hosting-step small {
+  color: #8f8f9e;
+  font-size: 12px;
+}
+
+.hosting-arrow {
+  flex-shrink: 0;
+  color: #686875;
+  font-size: 20px;
+}
+
+.hosting-note {
+  max-width: 800px;
+}
+
+.hosting-note p {
+  margin: 0;
+  color: #a9a9b5;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   ORDER TIMELINE
+   ========================================================= */
+
+.order-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.order-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 22px;
+  width: 1px;
+  background: #292932;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 25px;
+  padding-bottom: 45px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-number {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #13131a;
+  border: 1px solid #8b5cf6;
+  border-radius: 50%;
+  color: #a78bfa;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.timeline-item h3 {
+  margin: 5px 0 10px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #a9a9b5;
+  line-height: 1.8;
+}
+
+.timeline-item strong {
+  color: #a78bfa;
+}
+
+
+/* =========================================================
+   SHOPPER EXPERIENCE
+   ========================================================= */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.experience-card {
+  overflow: hidden;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 18px;
+}
+
+.experience-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0f0f14;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.experience-card:hover .experience-image img {
+  transform: scale(1.04);
+}
+
+.experience-content {
+  padding: 25px;
+}
+
+.experience-content > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.experience-content h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+}
+
+.experience-content p {
+  margin: 0;
+  color: #a9a9b5;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  min-height: 240px;
+  padding: 28px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+}
+
+.feature-card > span {
+  display: block;
+  margin-bottom: 25px;
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.feature-card h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #9999a6;
+  line-height: 1.75;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TECHNOLOGY STACK
+   ========================================================= */
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.tech-category {
+  padding: 28px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+}
+
+.tech-category > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #8b5cf6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tech-category h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+}
+
+.tech-category p {
+  margin: 0;
+  color: #9d9daa;
+  line-height: 1.75;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   WELL ARCHITECTED
+   ========================================================= */
+
+.well-intro {
+  max-width: 800px;
+  margin: -15px 0 45px;
+  color: #a9a9b5;
+  line-height: 1.9;
+}
+
+.well-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.well-card {
+  padding: 30px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+}
+
+.well-card > span {
+  display: block;
+  margin-bottom: 22px;
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.well-card h3 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.3rem;
+}
+
+.well-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.well-card li {
+  margin-bottom: 10px;
+  color: #9d9daa;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DESIGN DECISIONS
+   ========================================================= */
+
+.decision-list {
+  max-width: 950px;
+}
+
+.decision-item {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 30px;
+  padding: 35px 0;
+  border-bottom: 1px solid #292932;
+}
+
+.decision-item:first-child {
+  border-top: 1px solid #292932;
+}
+
+.decision-number {
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.decision-content h3 {
+  margin: 0 0 15px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+}
+
+.decision-content p {
+  margin: 0 0 10px;
+  color: #a9a9b5;
+  line-height: 1.8;
+}
+
+.decision-content p:last-child {
+  margin-bottom: 0;
+}
+
+.decision-content strong {
+  color: #a78bfa;
+}
+
+
+/* =========================================================
+   BUILD PROCESS
+   ========================================================= */
+
+.build-plan-image,
+.build-image {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.build-plan-image img,
+.build-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.build-week {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.week-label {
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.week-content h3 {
+  margin: 0 0 15px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+}
+
+.week-content p {
+  margin: 0 0 20px;
+  color: #a9a9b5;
+  line-height: 1.8;
+}
+
+.week-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.week-content li {
+  margin-bottom: 10px;
+  color: #9d9daa;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MY CONTRIBUTION
+   ========================================================= */
+
+.contribution-content > p {
+  max-width: 800px;
+  margin: 0 0 45px;
+  color: #c1c1ca;
+  line-height: 1.9;
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.contribution-card {
+  padding: 28px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+}
+
+.contribution-card > span {
+  display: block;
+  margin-bottom: 22px;
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.contribution-card h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+}
+
+.contribution-card p {
+  margin: 0;
+  color: #9999a6;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   LESSONS
+   ========================================================= */
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.lesson-card {
+  padding: 30px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 16px;
+}
+
+.lesson-card > span {
+  display: block;
+  margin-bottom: 20px;
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lesson-card h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+}
+
+.lesson-card p {
+  margin: 0;
+  color: #9d9daa;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   OUTCOME
+   ========================================================= */
+
+.outcome-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.outcome-main h2 {
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(35px, 5vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.outcome-main h2 span {
+  color: #a78bfa;
+}
+
+.outcome-main p {
+  margin: 0 0 20px;
+  color: #a9a9b5;
+  line-height: 1.9;
+}
+
+.outcome-main p:last-child {
+  margin-bottom: 0;
+}
+
+.outcome-stat {
+  padding: 35px;
+  background: #13131a;
+  border: 1px solid #292932;
+  border-radius: 18px;
+}
+
+.outcome-stat span {
+  display: block;
+  margin-bottom: 15px;
+  color: #8b5cf6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.outcome-stat strong {
+  display: block;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   PROJECT LINKS
+   ========================================================= */
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 190px;
+  padding: 15px 25px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.primary-link {
+  background: #8b5cf6;
+  border: 1px solid #8b5cf6;
+  color: #ffffff;
+}
+
+.primary-link:hover {
+  background: #a78bfa;
+  border-color: #a78bfa;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+}
+
+.secondary-link {
+  background: transparent;
+  border: 1px solid #8b5cf6;
+  color: #ffffff;
+}
+
+.secondary-link:hover {
+  background: #8b5cf6;
+  transform: translateY(-3px);
+}
+
+.project-link span {
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.project-closing {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.closing-line {
+  width: 100%;
+  height: 1px;
+  background: #292932;
+}
+
+.project-closing p {
+  margin: 40px auto;
+  color: #9d9daa;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .freshbasket-project {
+    padding: 0 20px 70px;
+  }
+
+  .freshbasket-header {
+    padding: 70px 0 60px;
+  }
+
+  .freshbasket-header h1 {
+    font-size: clamp(48px, 15vw, 80px);
+    letter-spacing: -3px;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .project-section {
+    padding: 70px 0;
+  }
+
+  .overview-content,
+  .outcome-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .problem-grid,
+  .well-grid,
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid,
+  .contribution-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-grid,
+  .lessons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .build-week {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .freshbasket-project {
+    width: 100%;
+    padding: 0 15px 50px;
+  }
+
+
+  /* HEADER */
+
+  .freshbasket-header {
+    padding: 55px 0 45px;
+  }
+
+  .freshbasket-header .project-label {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .freshbasket-header h1 {
+    font-size: clamp(42px, 15vw, 65px);
+    line-height: 0.98;
+    letter-spacing: -2.5px;
+  }
+
+  .project-tagline {
+    margin: 20px 0 35px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* META */
+
+  .meta-item {
+    padding: 17px;
+  }
+
+  .meta-label {
+    font-size: 9px;
+  }
+
+  .meta-value {
+    font-size: 13px;
+  }
+
+
+  /* GENERAL SECTIONS */
+
+  .project-section {
+    padding: 55px 0;
+  }
+
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(32px, 10vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+  }
+
+
+  /* OVERVIEW */
+
+  .overview-content {
+    gap: 25px;
+  }
+
+  .overview-text p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .overview-highlight {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .overview-highlight h3 {
+    font-size: 1.6rem;
+  }
+
+
+  /* FLOW */
+
+  .sync-flow {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .flow-item {
+    min-width: 85px;
+  }
+
+  .flow-item strong {
+    font-size: 11px;
+  }
+
+  .flow-arrow {
+    font-size: 15px;
+  }
+
+
+  /* GRIDS */
+
+  .problem-grid,
+  .well-grid,
+  .tech-stack-grid,
+  .features-grid,
+  .contribution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-card,
+  .well-card,
+  .feature-card,
+  .contribution-card,
+  .lesson-card {
+    padding: 23px;
+  }
+
+
+  /* SOLUTION */
+
+  .solution-content > p,
+  .hosting-note p,
+  .problem-intro p,
+  .well-intro {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .event-principle {
+    padding: 20px;
+  }
+
+  .principle-main {
+    margin-bottom: 20px;
+  }
+
+  .principle-main span {
+    min-width: 150px;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .principle-items {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ARCHITECTURE */
+
+  .architecture-image,
+  .flow-image,
+  .build-plan-image,
+  .build-image {
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .architecture-caption {
+    margin-bottom: 45px;
+  }
+
+  .architecture-caption p {
+    font-size: 13px;
+  }
+
+
+  /* HOSTING */
+
+  .hosting-flow {
+    flex-direction: column;
+    align-items: stretch;
+    overflow: visible;
+  }
+
+  .hosting-step {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hosting-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+
+
+  /* ORDER TIMELINE */
+
+  .order-timeline::before {
+    left: 19px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 38px 1fr;
+    gap: 18px;
+    padding-bottom: 35px;
+  }
+
+  .timeline-number {
+    width: 38px;
+    height: 38px;
+    font-size: 9px;
+  }
+
+  .timeline-item h3 {
+    font-size: 1.05rem;
+  }
+
+  .timeline-item p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* EXPERIENCE */
+
+  .experience-grid,
+  .lessons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .experience-content {
+    padding: 20px;
+  }
+
+  .experience-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-content p {
+    font-size: 14px;
+  }
+
+
+  /* DECISIONS */
+
+  .decision-item {
+    grid-template-columns: 40px 1fr;
+    gap: 15px;
+    padding: 25px 0;
+  }
+
+  .decision-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .decision-content p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* BUILD */
+
+  .build-week {
+    display: block;
+    margin: 40px 0;
+  }
+
+  .week-label {
+    margin-bottom: 15px;
+  }
+
+  .week-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .week-content p,
+  .week-content li {
+    font-size: 14px;
+  }
+
+
+  /* OUTCOME */
+
+  .outcome-main h2 {
+    font-size: clamp(31px, 9vw, 45px);
+    letter-spacing: -1px;
+  }
+
+  .outcome-main p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .outcome-stat {
+    padding: 25px;
+  }
+
+  .outcome-stat strong {
+    font-size: 1.25rem;
+  }
+
+
+  /* PROJECT LINKS */
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-link {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 20px;
+    font-size: 11px;
+  }
+
+
+  /* CLOSING */
+
+  .project-closing {
+    padding: 50px 0 20px;
+  }
+
+  .project-closing p {
+    margin: 30px auto;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+}

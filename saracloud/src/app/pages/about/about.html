@@ -1,0 +1,427 @@
+<section class="about-page">
+
+  <!-- =========================================
+       ABOUT INTRODUCTION
+       ========================================= -->
+
+  <section class="about-intro">
+
+    <div class="about-content">
+
+      <p class="about-label">
+        ABOUT ME
+      </p>
+
+      <h1>
+        Hi, I'm
+        <span class="about-name">
+          Sarah Ibukunoluwa Onasanya
+        </span>
+      </h1>
+
+      <p class="about-text">
+           A final-year Political Science student at Tai Solarin Federal University of Education, Nigeria, with academic knowledge of governance, political systems, international relations, diplomacy, public policy, and global affairs.    
+      </p>
+
+      <p class="about-text">
+         My studies have strengthened my ability to research, analyze issues, communicate effectively, and think critically about political and social matters. Through my academic and leadership experiences, I have developed a broader understanding of how political systems shape societies and international relationships.
+      </p>
+
+      <p class="about-text">
+         At the same time, I've been building another side of myself through technology. What started with curiosity gradually became a journey into software development, Linux, Cloud, and DevOps.      </p>
+
+    
+      <p class="about-text">I don't see these parts of my life as separate. They have each shaped the way I think, learn, solve problems, and understand the world around me.</p>   
+
+      <p class="about-text">
+        <strong>
+          Sara<span class="about-cloud">Cloud</span>
+        </strong>
+           brings those different parts of me together — my background, my learning, the things I build, the questions I explore, and the experiences that continue to shape my journey.
+      </p>
+
+    </div>
+
+
+
+    <!-- ONE PHOTO -->
+
+    <div class="about-image">
+
+      <img
+        src="/images/summitimg2.png"
+        alt="Sarah Ibukunoluwa Onasanya"
+      >
+
+    </div>
+
+  </section>
+
+
+<!-- =========================================================
+     JOURNEY INTRO
+     ========================================================= -->
+
+<div class="journey-intro">
+  <p class="journey-label">MY JOURNEY INTO TECH AND HOW IT'S GOING</p>
+
+  <h2>
+    Take a look below —
+    <span>how it all began.</span>
+  </h2>
+</div>
+
+
+
+
+  <!-- =========================================
+       SECTION 2 WILL COME HERE
+       ========================================= -->
+<section class="tech-journey">
+
+  <div class="tech-journey-content">
+
+    <img
+      class="tech-journey-logo"
+      src="/images/she-code-africa-logo.png"
+      alt="She Code Africa logo"
+    >
+
+    <p class="about-label">
+      WHERE IT ALL STARTED
+    </p>
+
+    <h2>
+      My first real step into
+      <span>tech.</span>
+    </h2>
+
+
+    <p>
+                My journey into technology didn't begin with me knowing exactly
+                where I was going. It started with an opportunity to learn
+                something completely different from what I was studying.
+                I joined the <strong>She Code Africa Academy, Cohort 3</strong>,
+                where I began learning DevOps.
+    </p>
+
+     <!-- READ MORE -->
+
+  <button
+    *ngIf="!showSheCodeAfrica"
+    class="read-more-btn"
+    (click)="showSheCodeAfrica = true"
+  >
+    READ MORE ↓
+  </button>
+
+
+  <!-- FULL CONTENT -->
+
+  <div
+    class="journey-details"
+    *ngIf="showSheCodeAfrica"
+  >
+
+    <p>
+                It was a 12-week intensive and hands-on program that combined
+                technical learning with practical assignments, weekly assessments,
+                soft-skill sessions, and a capstone project. Throughout the program,
+                I was introduced to essential DevOps concepts and tools while also
+                developing important professional skills through interactive
+                sessions. The combination of technical training, practical tasks,
+                assessments, and soft-skill development provided a well-rounded
+                learning experience.
+    </p>
+    <p>
+                 The journey was not without its challenges. There were moments when I felt overwhelmed by the complexity of the concepts and the pace of the program.
+                 There were times when something worked perfectly in a lesson
+                 but refused to work when I tried it myself. Errors would appear,
+                 configurations wouldn't behave as expected, and sometimes I had
+                 to go back to the beginning just to understand where I had gone
+                 wrong.
+    </p>
+
+    <p>
+             I had moments where I questioned whether I was actually getting
+             it. But instead of allowing the difficulty to become a stopping
+             point, I started treating each problem as something I needed to
+             understand. And that gradually changed the way I learned. I stopped expecting
+              everything to make sense immediately. I became more comfortable
+              searching, experimenting, making mistakes, breaking things,
+              fixing them, and trying again.
+    </p>
+    <p>       I didn't even have my own laptop when I started. I had to borrow one, and when it began struggling with commands and installations, I had to keep finding ways to learn until I could finally get mine. That moment meant more to me than simply owning a laptop — it meant having the freedom to keep building.</p>
+
+    <p>
+               Looking back, She Code Africa Academy was more than the place
+               where I was introduced to DevOps. It was where I began to
+               understand that learning technology would require patience,
+               curiosity, persistence, and a willingness to keep going even
+               when I didn't have all the answers.
+</p>
+
+<p>
+                And that was only the beginning.
+
+</p>
+
+    <div class="journey-project-link">
+      
+        <a routerLink="/projects/linux-server-health-auditor"  class="view-project-btn">
+             VIEW MY CAPSTONE PROJECT →
+        </a>
+
+         <!-- READ LESS AT THE VERY BOTTOM -->
+
+    <div class="read-less-container">
+
+      <button
+        class="read-more-btn"
+        (click)="showSheCodeAfrica = false"
+      >
+        READ LESS ↑
+      </button>
+
+    </div>   
+
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+<div class="women-techsters-card">
+
+  <div class="journey-header">
+
+    <img
+      src="/images/women-techsters-logo.png"
+      alt="Women Techsters logo"
+      class="women-techsters-logo"
+    >
+
+     <div class="journey-title">
+
+    <div class="about-label">
+      Building on what I started
+    </div>
+
+     <h2>
+      Taking the next step in
+      <span>tech.</span>
+    </h2>
+
+     </div> 
+
+  </div>
+
+ <div class="journey-summary"> 
+    <p>    After completing my three-month DevOps training at She Code Africa Academy, I realized that I need to understand more about the other side of what I was learning. I had learned about deployment, infrastructure, automation, and how applications are managed, but I wanted to understand where the application itself begins.
+    </p>
+
+
+
+  <!-- READ MORE -->
+
+  <button
+    *ngIf="! showWomenTechsters"
+    class="read-more-btn"
+    (click)="showWomenTechsters = true"
+  >
+    READ MORE ↓
+  </button>
+  </div>
+
+
+  <!-- FULL CONTENT -->
+
+  <div
+    class="journey-details"
+    *ngIf="showWomenTechsters"
+  >
+
+    <p>
+      That was what pushed me to apply for the <strong>Women Techsters Bootcamp Cohort 5.1</strong>. I wanted to learn computer languages and understand how software is developed from the beginning. I was also interested in Artificial Intelligence and wanted to learn how I could use AI to make the process of building and deploying applications faster and more efficient.
+    </p>
+
+    <p>For me, it was not about starting a completely different journey. It was about adding another part to the journey I had already started with DevOps. I wanted to understand the application side so that I could have a better picture of what happens from development to deployment.</p>
+
+    <p>During the bootcamp, I had the opportunity to put what I was learning into practice. At the end of the program, my team members and I built an educational web application aligned with the United Nation Sustainable Development Goals (SDGs). Building that project was a major part of my experience because it allowed me to move from learning concepts to actually creating something.</p>
+
+    <p>The experience helped me see how software development connects with DevOps and cloud. I began to understand that writing the application is one part of the process, while deploying, automating, managing, and making that application accessible to users is another.</p>
+
+    <p>Looking at my journey from <strong>She Code Africa Academy</strong> to <strong>Women Techsters Bootcamp</strong>, I can see how the two experiences complement each other. One helped me understand more about DevOps and cloud, while the other helped me understand software development. Together, they have helped me build a stronger understanding of how technology solutions are created and delivered.</p>
+
+    <p>This is why I continue to explore both sides as I grow in software development, DevOps, and cloud engineering.</p>
+
+    <div class="journey-project-link">
+
+     <a routerLink="/projects/education-web-app">
+        VIEW PROJECT →
+     </a>
+
+    </div>
+
+    <!-- READ LESS AT THE BOTTOM -->
+
+    <div class="read-less-container">
+
+      <button
+        class="read-more-btn"
+        (click)="showWomenTechsters = false"
+      >
+        READ LESS ↑
+      </button>
+
+      </div>
+ 
+  </div>
+
+</div>
+
+
+
+<!--==========================================
+     SECTION 3 — AKWANNYA HUB
+=========================================-->
+
+<div class="akwannya-hub-card">
+
+  <!-- HEADER -->
+
+  <div class="akwannya-hub-header">
+
+    <img
+      src="/images/akwannya-hub-logo.webp"
+      alt="Akwannya Hub logo"
+      class="akwannya-hub-logo"
+    >
+
+    <div class="akwannya-hub-title">
+
+      <div class="about-label">
+        Growing through collaboration
+      </div>
+
+      <h2>
+        <span>Cloud</span> Build With
+        Peers
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <!-- SUMMARY -->
+
+  <div class="journey-summary">
+
+    <p>
+      My journey in tech continued with Akwannya Hub’s
+      <strong>Cloud-Build-With-Peers</strong> Cohort 1, where I had
+      the opportunity to learn, build, and grow alongside other
+      aspiring cloud professionals. After gaining a foundation in
+      DevOps and software development, I wanted to keep challenging
+      myself through practical experience and collaboration.
+    </p>
+
+    <!-- READ MORE -->
+
+    <button
+      *ngIf="!showAkwannyaHub"
+      class="read-more-btn"
+      (click)="showAkwannyaHub = true"
+    >
+      READ MORE ↓
+    </button>
+
+  </div>
+
+
+  <!-- FULL CONTENT
+       Everything inside here collapses together
+  -->
+
+  <div
+    class="akwannya-hub-content"
+    *ngIf="showAkwannyaHub"
+  >
+
+    <p>
+      During the cohort, I worked with <strong>Team Eta</strong>,
+      and being part of the team taught me that growth in tech is
+      not only about what I can achieve individually, but also about
+      what we can accomplish together. We shared ideas, tackled
+      challenges, learned from one another, and worked together on
+      technical tasks and presentations.
+    </p>
+
+    <p>
+      The experience also provided opportunities to demonstrate my
+      commitment, technical growth, and ability to collaborate
+      effectively. I was recognized among the cohort’s Most Engaged
+      Participants, finishing in third place for my consistent
+      participation and active contribution throughout the program.
+    </p>
+
+    <p>
+      As a member of <strong>Team Eta</strong>, our collective efforts
+      were recognized across several categories. We placed third as
+      Best Team, achieved second place for Best Technical Presentation,
+      and were also recognized as the third Most Innovative Team.
+      These achievements reflected our ability to collaborate,
+      develop practical solutions, communicate technical concepts
+      effectively, and deliver quality work as a team.
+    </p>
+
+    <p>
+      Beyond the recognition, the experience strengthened my
+      understanding of cloud technologies while improving my
+      communication, problem-solving, teamwork, and presentation
+      skills. Working closely with my teammates also taught me how
+      different perspectives can contribute to better technical
+      outcomes.
+    </p>
+
+    <p>
+      <strong>Akwannya Hub</strong> became an important part of my
+      continuous growth in tech. It gave me the opportunity to apply
+      what I was learning in a collaborative environment, contribute
+      meaningfully to a team, and gain practical experience that
+      continues to shape my journey in cloud and technology.
+    </p>
+
+
+    <!-- VIEW PROJECT — NOW INSIDE COLLAPSIBLE CONTENT -->
+
+    <div class="akwannya-hub-project-link">
+
+      <a routerLink="/projects/fresh-basket">
+        VIEW PROJECT →
+      </a>
+
+    </div>
+
+
+    <!-- READ LESS -->
+
+    <div class="read-less-container">
+
+      <button
+        class="read-more-btn"
+        (click)="showAkwannyaHub = false"
+      >
+        READ LESS ↑
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>

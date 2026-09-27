@@ -1,0 +1,1354 @@
+/* =========================================================
+   SARACLOUD — HOME PAGE
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 100px);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 430px;
+  align-items: center;
+
+  gap: 60px;
+  padding: 110px 7%;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 5, 18, 0.96),
+      rgba(7, 5, 18, 0.72),
+      rgba(7, 5, 18, 0.45)
+    ),
+    url('/home-bg.png');
+
+  background-size: cover;
+  background-position: center calc(50% + 70px);
+  background-repeat: no-repeat;
+
+  color: #f8fafc;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PURPLE GLOW
+   ========================================================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  right: -180px;
+  top: 80px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 92, 246, 0.15);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO LEFT
+   ========================================================= */
+
+.hero-left {
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 14px;
+  margin-bottom: 22px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  border: 1px solid rgba(167, 139, 250, 0.28);
+
+  border-radius: 100px;
+
+  background: rgba(139, 92, 246, 0.10);
+
+  color: #9389af;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(50px, 6vw, 90px);
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+
+  margin: 40px 0 0;
+}
+
+
+.hero-title > span {
+  display: block;
+
+  margin-top: 18px;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(70px, 11vw, 150px);
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -6px;
+}
+
+
+.cloud-text {
+  color: #a78bfa;
+  margin-left: 3px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero-text {
+  max-width: 650px;
+
+  margin-top: 28px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 14px 23px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border 0.3s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primary {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6d28d9,
+      #8b5cf6
+    );
+
+  box-shadow:
+    0 10px 30px
+    rgba(109, 40, 217, 0.30);
+}
+
+
+.primary:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(139, 92, 246, 0.40);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondary {
+  color: #ffffff;
+
+  border:
+    1px solid rgba(167, 139, 250, 0.25);
+
+  background:
+    rgba(15, 10, 31, 0.70);
+}
+
+
+.secondary:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(167, 139, 250, 0.65);
+
+  background:
+    rgba(139, 92, 246, 0.12);
+}
+
+
+/* =========================================================
+   TERMINAL CARD
+   ========================================================= */
+
+.hero-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 430px;
+
+  justify-self: end;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(167, 139, 250, 0.22);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 13, 40, 0.96),
+      rgba(9, 6, 20, 0.92)
+    );
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.50),
+    0 0 70px rgba(139, 92, 246, 0.10);
+
+  animation:
+    floating 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FLOATING ANIMATION
+   ========================================================= */
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* =========================================================
+   TERMINAL HEADER
+   ========================================================= */
+
+.terminal-header {
+  display: flex;
+
+  gap: 8px;
+
+  padding: 16px 18px;
+
+  background:
+    rgba(20, 13, 40, 0.85);
+
+  border-bottom:
+    1px solid rgba(167, 139, 250, 0.10);
+}
+
+
+.terminal-header span {
+  width: 11px;
+  height: 11px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #7c6f91;
+}
+
+
+/* =========================================================
+   TERMINAL BODY
+   ========================================================= */
+
+.terminal-body {
+  padding: 28px;
+
+  font-family:
+    "Fira Code",
+    "Courier New",
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  overflow-x: auto;
+}
+
+
+.terminal-body p {
+  margin: 12px 0;
+}
+
+
+.green {
+  color: #c084fc;
+}
+
+
+.success {
+  color: #a78bfa;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   WHAT I DOCUMENT
+   ========================================================= */
+
+.documentation-section {
+  padding: 100px 8%;
+
+  background: #05030d;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   DOCUMENTATION HEADING
+   ========================================================= */
+
+.documentation-heading {
+  max-width: 750px;
+
+  margin-bottom: 50px;
+}
+
+
+.documentation-heading h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+
+.documentation-heading .cloud-text {
+  color: #a78bfa;
+}
+
+
+.documentation-intro {
+  max-width: 650px;
+
+  color: #a1a1aa;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   DOCUMENTATION SHOWCASE
+   ========================================================= */
+
+.documentation-showcase {
+  position: relative;
+
+  width: 100%;
+  max-width: 1150px;
+
+  height: 450px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(167, 139, 250, 0.25);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.12),
+      rgba(10, 7, 20, 0.95)
+    );
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   SLIDES
+   ========================================================= */
+
+.documentation-slide {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  padding: 45px;
+
+  box-sizing: border-box;
+
+  opacity: 0;
+
+  transform: translateX(60px);
+
+  animation:
+    documentationAnimation 30s infinite;
+}
+
+
+.slide-1 {
+  animation-delay: 0s;
+}
+
+.slide-2 {
+  animation-delay: 5s;
+}
+
+.slide-3 {
+  animation-delay: 10s;
+}
+
+.slide-4 {
+  animation-delay: 15s;
+}
+
+.slide-5 {
+  animation-delay: 20s;
+}
+
+.slide-6{
+  animation-delay: 25s;
+}
+
+/* =========================================================
+   DOCUMENTATION ANIMATION
+   ========================================================= */
+
+@keyframes documentationAnimation {
+
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  22% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  27% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+}
+
+
+/* =========================================================
+   DOCUMENTATION IMAGE
+   ========================================================= */
+
+.documentation-image {
+  width: 100%;
+  height: 340px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  border:
+    1px solid rgba(167, 139, 250, 0.2);
+
+  background: #080510;
+}
+
+
+.documentation-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transform: scale(1);
+
+  animation:
+    imageZoom 5s ease-in-out infinite;
+}
+
+
+@keyframes imageZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.06);
+  }
+}
+
+
+/* =========================================================
+   DOCUMENTATION TEXT
+   ========================================================= */
+
+.documentation-content {
+  padding-right: 30px;
+}
+
+
+.documentation-number {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.documentation-icon {
+  margin-bottom: 12px;
+
+  font-size: 36px;
+}
+
+
+.documentation-content h3 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+}
+
+
+.documentation-content p {
+  max-width: 470px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+
+.documentation-dots {
+  position: absolute;
+
+  bottom: 25px;
+  right: 40px;
+
+  display: flex;
+
+  gap: 8px;
+
+  z-index: 20;
+}
+
+
+.documentation-dots span {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.3);
+
+  animation:
+    dotAnimation 25s infinite;
+}
+
+
+.documentation-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.documentation-dots span:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.documentation-dots span:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.documentation-dots span:nth-child(4) {
+  animation-delay: 15s;
+}
+
+.documentation-dots span:nth-child(5) {
+  animation-delay: 20s;
+}
+
+
+@keyframes dotAnimation {
+
+  0% {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  5% {
+    width: 25px;
+    background: #a78bfa;
+  }
+
+  22% {
+    width: 25px;
+    background: #a78bfa;
+  }
+
+  27% {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  100% {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 360px;
+
+    gap: 40px;
+
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero-title > span {
+    font-size: clamp(60px, 9vw, 110px);
+    letter-spacing: -5px;
+  }
+
+  .hero-card {
+    max-width: 360px;
+  }
+
+  .documentation-slide {
+    gap: 30px;
+    padding: 35px;
+  }
+
+  .documentation-image {
+    height: 300px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    align-items: start;
+
+    padding:
+      100px 7%
+      80px;
+  }
+
+  .hero-content {
+    max-width: 750px;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 500px;
+
+    justify-self: center;
+
+    margin-top: 20px;
+  }
+
+  .documentation-showcase {
+    height: 600px;
+  }
+
+  .documentation-slide {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    align-content: center;
+
+    padding: 40px;
+  }
+
+  .documentation-image {
+    height: 250px;
+  }
+
+  .documentation-content {
+    padding-right: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  /* -------------------------
+     HERO
+     ------------------------- */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding:
+      75px 6%
+      70px;
+
+    gap: 45px;
+
+    background-position:
+      center calc(50% + 30px);
+  }
+
+
+  .hero::before {
+    width: 280px;
+    height: 280px;
+
+    right: -140px;
+    top: 120px;
+
+    filter: blur(80px);
+  }
+
+
+  /* -------------------------
+     HERO CONTENT
+     ------------------------- */
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .eyebrow {
+    max-width: 100%;
+
+    padding: 7px 11px;
+
+    margin-bottom: 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  .hero h1 {
+    margin-top: 25px;
+
+    font-size: clamp(42px, 13vw, 58px);
+
+    line-height: 1;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .hero-title > span {
+    margin-top: 12px;
+
+    font-size: clamp(52px, 17vw, 82px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    word-break: normal;
+  }
+
+
+  .hero-text {
+    max-width: 100%;
+
+    margin-top: 24px;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+
+  /* -------------------------
+     BUTTONS
+     ------------------------- */
+
+  .hero-buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 28px;
+  }
+
+
+  .hero-buttons .btn {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 14px 20px;
+  }
+
+
+  /* -------------------------
+     TERMINAL
+     ------------------------- */
+
+  .hero-card {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 0;
+
+    border-radius: 15px;
+
+    animation: none;
+  }
+
+
+  .terminal-header {
+    padding: 13px 15px;
+  }
+
+
+  .terminal-header span {
+    width: 9px;
+    height: 9px;
+  }
+
+
+  .terminal-body {
+    padding: 20px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    overflow-x: auto;
+  }
+
+
+  /* -------------------------
+     DOCUMENTATION
+     ------------------------- */
+
+  .documentation-section {
+    padding:
+      70px 5%
+      80px;
+  }
+
+
+  .documentation-heading {
+    margin-bottom: 35px;
+  }
+
+
+  .documentation-heading h2 {
+    font-size: 32px;
+
+    line-height: 1.15;
+  }
+
+
+  .documentation-intro {
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+
+  .documentation-showcase {
+    height: 620px;
+
+    border-radius: 20px;
+  }
+
+
+  .documentation-slide {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+  }
+
+
+  .documentation-image {
+    width: 100%;
+
+    height: 220px;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+  }
+
+
+  .documentation-content {
+    width: 100%;
+
+    padding: 0;
+  }
+
+
+  .documentation-number {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .documentation-icon {
+    margin-bottom: 8px;
+
+    font-size: 28px;
+  }
+
+
+  .documentation-content h3 {
+    margin-bottom: 12px;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+  }
+
+
+  .documentation-content p {
+    max-width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* -------------------------
+     DOTS
+     ------------------------- */
+
+  .documentation-dots {
+    bottom: 18px;
+
+    right: 50%;
+
+    transform: translateX(50%);
+
+    gap: 6px;
+  }
+
+
+  .documentation-dots span {
+    width: 6px;
+    height: 6px;
+  }
+
+
+  /* Keep active dot from making the group too wide */
+  @keyframes dotAnimation {
+
+    0% {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    5% {
+      width: 20px;
+      height: 6px;
+      background: #a78bfa;
+    }
+
+    22% {
+      width: 20px;
+      height: 6px;
+      background: #a78bfa;
+    }
+
+    27% {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .hero {
+    padding:
+      65px 5%
+      60px;  
+
+    gap: 35px;
+  }
+
+
+  .eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+
+    padding: 6px 9px;
+  }
+
+
+  .hero h1 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .hero-title > span {
+    font-size: 50px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .hero-text {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .terminal-body {
+    padding: 17px;
+
+    font-size: 10px;
+  }
+
+
+  .documentation-section {
+    padding:
+      60px 4%
+      70px;
+  }
+
+
+  .documentation-heading h2 {
+    font-size: 29px;
+  }
+
+
+  .documentation-showcase {
+    height: 590px;
+
+    border-radius: 18px;
+  }
+
+
+  .documentation-slide {
+    padding: 24px;
+  }
+
+
+  .documentation-image {
+    height: 190px;
+  }
+
+
+  .documentation-content h3 {
+    font-size: 23px;
+  }
+
+
+  .documentation-content p {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+
+  .hero-title > span {
+    font-size: 44px;
+  }
+
+
+  .documentation-showcase {
+    height: 570px;
+  }
+
+
+  .documentation-image {
+    height: 170px;
+  }
+}
+
+/* =========================================================
+   EYEBROW — FIX
+   ========================================================= */
+
+.eyebrow {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  padding: 8px 14px;
+  margin: 0 0 22px;
+
+  position: relative;
+  z-index: 10;
+
+  color: #c4b5fd !important;
+
+  background: rgba(139, 92, 246, 0.12);
+
+  border: 1px solid rgba(167, 139, 250, 0.4);
+
+  border-radius: 100px;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px !important;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: 1.8px;
+
+  white-space: normal;
+}
+
+
+/* MOBILE EYEBROW */
+
+@media (max-width: 650px) {
+  .eyebrow {
+    display: inline-flex !important;
+
+    width: auto;
+    max-width: 100%;
+
+    padding: 7px 11px;
+
+    margin-bottom: 18px;
+
+    font-size: 9px !important;
+    letter-spacing: 1.2px;
+
+    color: #c4b5fd !important;
+
+    background: rgba(139, 92, 246, 0.14);
+
+    border-color: rgba(167, 139, 250, 0.45);
+  }
+}
